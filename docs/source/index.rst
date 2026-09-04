@@ -26,7 +26,7 @@ The module can be easily installed using PiPy:
 
    >> pip install safe-vamd
 
-The source code is available at `GitHub <https://github.com/>`_\.
+The source code is available at `GitHub <https://github.com/rafael-castro-mota/safe-vamd>`_\.
 
 Acknowledgement
 ---------------
