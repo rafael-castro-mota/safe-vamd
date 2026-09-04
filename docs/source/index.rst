@@ -7,7 +7,7 @@ SAFE-VAMD
 ====================================================
 
 This python package computes acoustic vertical modes propagating on a stratified, range-indepedent atmosphere and
-can, subsequently, project acoustic pressure data onto them, resulting in a reconstructed field. The data can either
+can, subsequently, project acoustic pressure data onto them, resulting in a reconstructed far-field. The data can either
 be numerical or experimental.
 
 **The package features:**
