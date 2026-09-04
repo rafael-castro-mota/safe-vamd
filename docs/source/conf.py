@@ -19,8 +19,10 @@ sys.path.append(os.path.abspath('sphinxext'))
 
 
 project = 'SAFE-VAMD'
-copyright = '2026, Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research group at the German National Metrology Institute'
-author = 'Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research group at the German National Metrology Institute'
+copyright = ('2026, Rafael Castro-Mota, Paul Williams, Stefan Jacob. '
+             'Infrasound research group at the German National Metrology Institute')
+author = ('Rafael Castro-Mota, Paul Williams, Stefan Jacob. '
+          'Infrasound research group at the German National Metrology Institute')
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -31,21 +33,12 @@ author = 'Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research g
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['matplotlib.sphinxext.plot_directive', 'sphinx.ext.napoleon',
- 'numpydoc','sphinx.ext.autodoc', 'sphinx.ext.autosummary']
+              'numpydoc', 'sphinx.ext.autodoc', 'sphinx.ext.autosummary']
 
-numpydoc_show_class_members=False
+numpydoc_show_class_members = False
 
 autosummary_generate = True
 autoclass_content = "both"
-#html_logo = 'image/logo.png'
-#html_favicon = 'image/logo.ico'
-
-#sphinx_gallery_conf = {
-#     'examples_dirs': '../../examples',   # path to your example scripts
-#     'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
-#}
-
-
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

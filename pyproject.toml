@@ -18,7 +18,12 @@ authors = [
 dependencies = [
     "matplotlib>=3.8.2",
     "numpy>=1.26.3",
-    "scipy>=1.15.2"
+    "scipy>=1.15.2",
+    "numpydoc",
+    "matplotlib.sphinxext.plot_directive",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary"
 ]
 
 [tool.setuptools.packages.find]
