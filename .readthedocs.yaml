@@ -7,7 +7,7 @@ build:
 
 # Specify the path to your Sphinx configuration file
 sphinx:
-  configuration: safe_vamd/docs/source/conf.py  # Adjust path to where conf.py lives
+  configuration: docs/source/conf.py  # Adjust path to where conf.py lives
 
 python:
   install:
