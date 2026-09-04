@@ -12,7 +12,7 @@ license = {text = "MIT"}
 authors = [
     {name = "Rafael Castro Mota", email = "rafael.castro-mota@ptb.de"},
     {name = "Stefan Jacob", email = "stefan.jacob@ptb.de"},
-    {name = "Paul Williams", email = "paul.williams@@uts.edu.au"}
+    {name = "Paul Williams", email = "paul.williams@uts.edu.au"}
 ]
 
 dependencies = [
