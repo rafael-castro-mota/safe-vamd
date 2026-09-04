@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>safe_vamd.source package &#8212; SAFE-VAMD  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="safe_vamd.stratified_atmosphere package" href="safe_vamd.stratified_atmosphere.html" />
+    <link rel="prev" title="safe_vamd.solver package" href="safe_vamd.solver.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.stratified_atmosphere.html" title="safe_vamd.stratified_atmosphere package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.solver.html" title="safe_vamd.solver package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="safe_vamd.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">safe_vamd.source package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="safe-vamd-source-package">
+<h1>safe_vamd.source package<a class="headerlink" href="#safe-vamd-source-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-safe_vamd.source.source">
+<span id="safe-vamd-source-source-module"></span><h2>safe_vamd.source.source module<a class="headerlink" href="#module-safe_vamd.source.source" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="safe_vamd.source.source.Source">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.source.source.</span></span><span class="sig-name descname"><span class="pre">Source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.source.source.Source" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class to hold information about a monopole.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.source.source.Source.w">
+<span class="sig-name descname"><span class="pre">w</span></span><a class="headerlink" href="#safe_vamd.source.source.Source.w" title="Link to this definition">¶</a></dt>
+<dd><p>The excitation frequency (in radeans per second).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc">MathFunc</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.source.source.Source.height">
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#safe_vamd.source.source.Source.height" title="Link to this definition">¶</a></dt>
+<dd><p>The height (in meters) at which the monopole is placed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.source.source.Source.amplitude">
+<span class="sig-name descname"><span class="pre">amplitude</span></span><a class="headerlink" href="#safe_vamd.source.source.Source.amplitude" title="Link to this definition">¶</a></dt>
+<dd><p>The amplitude (in kg/(m^-3 s)) of the monopole.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initializes an instance of class Source.</p>
+</dd></dl>
+
+</section>
+<section id="module-safe_vamd.source">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-safe_vamd.source" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">safe_vamd.source package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-safe_vamd.source.source">safe_vamd.source.source module</a><ul>
+<li><a class="reference internal" href="#safe_vamd.source.source.Source"><code class="docutils literal notranslate"><span class="pre">Source</span></code></a><ul>
+<li><a class="reference internal" href="#safe_vamd.source.source.Source.w"><code class="docutils literal notranslate"><span class="pre">Source.w</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.source.source.Source.height"><code class="docutils literal notranslate"><span class="pre">Source.height</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.source.source.Source.amplitude"><code class="docutils literal notranslate"><span class="pre">Source.amplitude</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-safe_vamd.source">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="safe_vamd.solver.html"
+                          title="previous chapter">safe_vamd.solver package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="safe_vamd.stratified_atmosphere.html"
+                          title="next chapter">safe_vamd.stratified_atmosphere package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/safe_vamd.source.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.stratified_atmosphere.html" title="safe_vamd.stratified_atmosphere package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.solver.html" title="safe_vamd.solver package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="safe_vamd.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">safe_vamd.source package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2026, Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research group at the German National Metrology Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

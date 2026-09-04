@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SAFE Computation &#8212; SAFE-VAMD  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Vertical Atmospheric Mode Decomposition" href="vamd.html" />
+    <link rel="prev" title="SAFE-VAMD" href="modules.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vamd.html" title="Vertical Atmospheric Mode Decomposition"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="SAFE-VAMD"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">SAFE-VAMD</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SAFE Computation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-safe_vamd.safe_computation">
+<span id="safe-computation"></span><h1>SAFE Computation<a class="headerlink" href="#module-safe_vamd.safe_computation" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.safe_computation.</span></span><span class="sig-name descname"><span class="pre">SAFEComputation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source"><span class="pre">Source</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">backgrnd_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField"><span class="pre">BackgroundField</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mesh.html#safe_vamd.mesh.mesh_1d.Mesh1D" title="safe_vamd.mesh.mesh_1d.Mesh1D"><span class="pre">Mesh1D</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">acoustic_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><span class="pre">AcousticField</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_absorv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ground_impedance_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that represents an application of the Semi-Analytic Finite-Element (SAFE) method.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.source">
+<span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.source" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of the Source class with monopole source information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source">Source</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.backgrnd_field">
+<span class="sig-name descname"><span class="pre">backgrnd_field</span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.backgrnd_field" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of the BackgroundField class representing the atmospheric background field.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField">BackgroundField</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.mesh">
+<span class="sig-name descname"><span class="pre">mesh</span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.mesh" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of the Mesh1D class with the finite-elements and nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.mesh.html#safe_vamd.mesh.mesh_1d.Mesh1D" title="safe_vamd.mesh.mesh_1d.Mesh1D">Mesh1D</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.acoustic_field">
+<span class="sig-name descname"><span class="pre">acoustic_field</span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.acoustic_field" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of the AcousticField class with the Vertical Atmospheric (VA) modes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField">AcousticField</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.alpha">
+<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.alpha" title="Link to this definition">¶</a></dt>
+<dd><p>A function to set added absorption in the Perfectly Matched Layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc">MathFunc</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.air_absorv">
+<span class="sig-name descname"><span class="pre">air_absorv</span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.air_absorv" title="Link to this definition">¶</a></dt>
+<dd><p>A boolean to toggle air absorption (air_absorv = True makes the simulation take into account air absorption)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.ground_impedance_value">
+<span class="sig-name descname"><span class="pre">ground_impedance_value</span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.ground_impedance_value" title="Link to this definition">¶</a></dt>
+<dd><p>The complex-valued normalized surface ground impedance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>complex</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parameters</span> <span class="pre">for</span> <span class="pre">initialization.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source"><em>Source</em></a><em>, </em><em>optional</em>) – An instance of the Source class with monopole source information.</p></li>
+<li><p><strong>backgrnd_field</strong> (<a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField"><em>BackgroundField</em></a><em>, </em><em>optional</em>) – An instance of the BackgroundField class representing the atmospheric background field.</p></li>
+<li><p><strong>mesh</strong> (<a class="reference internal" href="safe_vamd.mesh.html#safe_vamd.mesh.mesh_1d.Mesh1D" title="safe_vamd.mesh.mesh_1d.Mesh1D"><em>Mesh1D</em></a><em>, </em><em>optional</em>) – An instance of the Mesh1D class with the finite-elements and nodes.</p></li>
+<li><p><strong>acoustic_field</strong> (<a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><em>AcousticField</em></a><em>, </em><em>optional</em>) – An instance of the AcousticField class with the Vertical Atmospheric (VA) modes</p></li>
+<li><p><strong>alpha_value</strong> (<em>float</em><em>, </em><em>optional:</em>) – A value to set added absorption in the Perfectly Matched Layer.</p></li>
+<li><p><strong>air_absorv</strong> (<em>bool</em><em>, </em><em>optional</em>) – A boolean to toggle air absorption (air_absorv = True makes the simulation take into account air absorption)</p></li>
+<li><p><strong>ground_impedance_value</strong> (<em>complex</em>) – The complex-valued normalized surface ground impedance.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.match_to_monopole">
+<span class="sig-name descname"><span class="pre">match_to_monopole</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source_height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source_amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><span class="pre">AcousticField</span></a></span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.match_to_monopole" title="Link to this definition">¶</a></dt>
+<dd><p>Uses the methodology in <a class="reference external" href="https://doi.org/10.1121/10.0002912">https://doi.org/10.1121/10.0002912</a> to match either the
+upwind or downwind VA modes to a monopole source. it then updates the modal amplitudes on the AcousticField
+object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source_height</strong> (<em>float</em>) – Height (in meters) of the monopole.</p></li>
+<li><p><strong>source_amplitude</strong> – Amplitude (in kg/(m^-3 s)) of the monopole.</p></li>
+<li><p><strong>side</strong> (<em>str</em>) – Which set of modes should be used for the mode decomposition (side = “downwind” sets the procedure use the
+downwind modal set, “upwind” sets it to use the upwind modes).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The acoustic field induced by the monopole.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField">AcousticField</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.save_modes_in_txt">
+<span class="sig-name descname"><span class="pre">save_modes_in_txt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.save_modes_in_txt" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>saves the upwind and downwind modes in separate .txt files with</dt><dd><p>the save_the_modes_in_txt method in the acoustic field attribute.</p>
+</dd>
+</dl>
+<p>For N number of modes with eigenvectors of size K, the .txt file has the following format:</p>
+<p>height[0]       eigenvector_mode_1[0]       …     eigenvector_mode_N[0]
+…             …                         …     …
+height[K]       eigenvector_mode_1[K]       …     eigenvector_mode_N[K]
+###             amplitude_mode_1            …     amplitude_mode_N
+###             eigenvalue_mode_1           …     eigenvalue_mode_N
+###             ref_wavenumber_mode_1       …     ref_wavenumber_mode_N</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.set_alpha">
+<span class="sig-name descname"><span class="pre">set_alpha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alpha_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.set_alpha" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.set_ground_impedance">
+<span class="sig-name descname"><span class="pre">set_ground_impedance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ground_impedance_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.set_ground_impedance" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.setup">
+<span class="sig-name descname"><span class="pre">setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_at_ground</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">9.81</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pml_thick_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.setup" title="Link to this definition">¶</a></dt>
+<dd><p>Builds the necessary objects related to the computational mesh and background atmospheric field from an inputted
+test file a header and columns for height, temperature, wind-velocity and relative humidity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_file</strong> (<em>str</em>) – Path to the input test file.</p></li>
+<li><p><strong>f</strong> (<em>float</em>) – Excitation frequency (in Hz)</p></li>
+<li><p><strong>rho_at_ground</strong> (<em>float</em>) – Value of the air density at ground level.</p></li>
+<li><p><strong>g_value</strong> (<em>float</em><em>, </em><em>optional</em>) – Value for the acceleration of gravity.</p></li>
+<li><p><strong>pml_thick_factor</strong> (<em>float</em><em>, </em><em>optional</em>) – Parameter that controls the thickness of the Perfectly Matched</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.solve">
+<span class="sig-name descname"><span class="pre">solve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ground_impedance_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_absorption</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><span class="pre">AcousticField</span></a></span></span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.solve" title="Link to this definition">¶</a></dt>
+<dd><p>Assembles the necessary matrices for the cubic eigenvalue problem and solves it by using the function
+kirby_solver_lagrange.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alpha_value</strong> (<em>float</em>) – A parameter to set added absorption in the Perfectly Matched Layer.</p></li>
+<li><p><strong>air_absorption</strong> (<em>bool</em>) – A boolean to toggle air absorption (air_absorv = True makes the simulation take into account air absorption)</p></li>
+<li><p><strong>ground_impedance_value</strong> (<em>complex</em>) – The complex-valued normalized surface ground impedance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The acoustic pressure field with the upwind and downwind modes.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField">AcousticField</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.safe_computation.SAFEComputation.toggle_air_absorv">
+<span class="sig-name descname"><span class="pre">toggle_air_absorv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">air_absorv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.safe_computation.SAFEComputation.toggle_air_absorv" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">SAFE Computation</a><ul>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation"><code class="docutils literal notranslate"><span class="pre">SAFEComputation</span></code></a><ul>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.source"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.source</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.backgrnd_field"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.backgrnd_field</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.mesh"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.mesh</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.acoustic_field"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.acoustic_field</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.alpha"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.alpha</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.air_absorv"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.air_absorv</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.ground_impedance_value"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.ground_impedance_value</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.match_to_monopole"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.match_to_monopole()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.save_modes_in_txt"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.save_modes_in_txt()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.set_alpha"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.set_alpha()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.set_ground_impedance"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.set_ground_impedance()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.setup"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.setup()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.solve"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.solve()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.safe_computation.SAFEComputation.toggle_air_absorv"><code class="docutils literal notranslate"><span class="pre">SAFEComputation.toggle_air_absorv()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="modules.html"
+                          title="previous chapter">SAFE-VAMD</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="vamd.html"
+                          title="next chapter">Vertical Atmospheric Mode Decomposition</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/safecomputation.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="vamd.html" title="Vertical Atmospheric Mode Decomposition"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="SAFE-VAMD"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SAFE Computation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2026, Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research group at the German National Metrology Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Vertical Atmospheric Mode Decomposition &#8212; SAFE-VAMD  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Packages" href="safe_vamd.html" />
+    <link rel="prev" title="SAFE Computation" href="safecomputation.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.html" title="Packages"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="safecomputation.html" title="SAFE Computation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">SAFE-VAMD</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Vertical Atmospheric Mode Decomposition</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-safe_vamd.vamd">
+<span id="vertical-atmospheric-mode-decomposition"></span><h1>Vertical Atmospheric Mode Decomposition<a class="headerlink" href="#module-safe_vamd.vamd" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.vamd.</span></span><span class="sig-name descname"><span class="pre">VAMD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acoustic_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><span class="pre">AcousticField</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">complex</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.vamd.VAMD" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents an application of the Vertical-Atmospheric Mode-Decomposition (VAMD) method where a set of acoustic
+pressure samples (or transfer functions) is decomposed onto a set of vertical atmospheric (VA) acoustic modes.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.acoustic_field">
+<span class="sig-name descname"><span class="pre">acoustic_field</span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.acoustic_field" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of a AcousticField with the VA acoustic modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField">AcousticField</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.mode_filter">
+<span class="sig-name descname"><span class="pre">mode_filter</span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.mode_filter" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of a ModeFilter with methods capable of filtering the original VA modal basis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.mode_filter.ModeFilter" title="safe_vamd.solver.mode_filter.ModeFilter">ModeFilter</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.x_samples">
+<span class="sig-name descname"><span class="pre">x_samples</span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.x_samples" title="Link to this definition">¶</a></dt>
+<dd><p>The x-coordinates (range) for the samples taken in the Source-Receiver plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sequence[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.z_samples">
+<span class="sig-name descname"><span class="pre">z_samples</span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.z_samples" title="Link to this definition">¶</a></dt>
+<dd><p>The z-coordinates (height) for the samples taken in the Source-Receiver plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sequence[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">p-samples</span></span></dt>
+<dd><p>The complex-valued acoustic pressure (or transfer function) samples taken in the Source-Receiver plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sequence[complex]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Parameters</span> <span class="pre">for</span> <span class="pre">initialization.</span></span></dt>
+<dd></dd></dl>
+
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>acoustic_field</strong> (<a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><em>AcousticField</em></a><em>, </em><em>optional</em>) – An instance of a AcousticField with the VA acoustic mode basis.</p></li>
+<li><p><strong>x_samples</strong> (<em>Sequence</em><em>[</em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The x-coordinates (range) for the samples taken in the Source-Receiver plane.</p></li>
+<li><p><strong>z_samples</strong> (<em>Sequence</em><em>[</em><em>float</em><em>]</em><em>, </em><em>optional</em>) – The z-coordinates (height) for the samples taken in the Source-Receiver plane.</p></li>
+<li><p><strong>p-samples</strong> (<em>Sequence</em><em>[</em><em>complex</em><em>]</em><em>, </em><em>optional</em>) – The complex-valued acoustic pressure (or transfer function) samples taken in the Source-Receiver plane.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.calculate_amp_factors">
+<span class="sig-name descname"><span class="pre">calculate_amp_factors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.mode.Mode" title="safe_vamd.solver.mode.Mode"><span class="pre">Mode</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">complex</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.calculate_amp_factors" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the convertion factors for the mode amplitudes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modes</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.mode.Mode" title="safe_vamd.solver.mode.Mode"><em>Mode</em></a><em>]</em>) – List of modes (instance of Mode) for which the convertion factors are computed.</p></li>
+<li><p><strong>x_ref</strong> (<em>float</em><em>, </em><em>optional</em>) – Reference range coordinate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The convertion factors from the auxiliary referential (at x_ref) to the original one.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sequence[complex]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.compute_matrix_m">
+<span class="sig-name descname"><span class="pre">compute_matrix_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.mode.Mode" title="safe_vamd.solver.mode.Mode"><span class="pre">Mode</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">_ScalarType_co</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.compute_matrix_m" title="Link to this definition">¶</a></dt>
+<dd><p>The individual contributions of the VA modes on the sampling positions, expressed in matrix form
+(see Eq. 15 in <a class="reference external" href="https://doi.org/10.1016/j.enganabound.2025.106308">https://doi.org/10.1016/j.enganabound.2025.106308</a>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modes</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.mode.Mode" title="safe_vamd.solver.mode.Mode"><em>Mode</em></a><em>]</em>) – List of modes (instances of Mode) for which the compute matrix is computed.</p></li>
+<li><p><strong>x_ref</strong> (<em>float</em><em>, </em><em>optional</em>) – Range reference where the decay of the modes is set to zero.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(first-dimension/rows).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A two-dimensional numpy array with the modal contributions (second-dimension/columns) at each sampling location</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.compute_pseudo_m">
+<span class="sig-name descname"><span class="pre">compute_pseudo_m</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ref</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spread_3d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.compute_pseudo_m" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the pseudo-inverse matrix to get the modal amplitudes from the samples.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>modes</strong> (<em>Sequence</em><em>[</em><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.mode.Mode" title="safe_vamd.solver.mode.Mode"><em>Mode</em></a><em>]</em>) – List of modes (instance of Mode) for which the pseudo-inverse matrix is computed.</p></li>
+<li><p><strong>x_ref</strong> (<em>float</em><em>, </em><em>optional</em>) – Reference range coordinate.</p></li>
+<li><p><strong>spread_3d</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggles the use of a correction factor accounting for spherical spreading.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The computed Moore-Penrose pseudo-inverse matrix</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.load_modes_from_txt">
+<span class="sig-name descname"><span class="pre">load_modes_from_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downwind_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upwind_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.load_modes_from_txt" title="Link to this definition">¶</a></dt>
+<dd><p>Receives the path to text file(s) with the downwind, upwind or both sets of modes, creates an instance of
+AcousticField and uses its method (.load_modes_from_txt) to load the acoustic modes. It then sets it as an
+attribute of the VAMD class.</p>
+<dl class="simple">
+<dt>For a mode basis with eigenvectors of size N and K number of VA modes, the .txt file should</dt><dd><p>have the following format:</p>
+</dd>
+</dl>
+<p>height[0]       eigenvector_mode_1[0]       …     eigenvector_mode_N[0]
+…             …                         …     …
+height[K]       eigenvector_mode_1[K]       …     eigenvector_mode_N[K]
+###             amplitude_mode_1            …     amplitude_mode_N
+###             eigenvalue_mode_1           …     eigenvalue_mode_N
+###             ref_wavenumber_mode_1       …     ref_wavenumber_mode_N</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>downwind_path</strong> (<em>str</em><em>, </em><em>optional</em>) – The path to the text file with the downwind VA modes.</p></li>
+<li><p><strong>upwind_path</strong> (<em>str</em><em>, </em><em>optional</em>) – The path to the text file with the upwind VA modes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.load_samples_from_txt">
+<span class="sig-name descname"><span class="pre">load_samples_from_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sample_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.load_samples_from_txt" title="Link to this definition">¶</a></dt>
+<dd><p>Loads the acoustic pressure samples from a semicolon separated .txt file. with columns for, respectively,
+height, range, real part and imaginary part of the acoustic pressure samples (the .txt file contains a header).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sample_path</strong> (<em>param</em>) – The path to the txt file containing the acoustic pressure samples.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.match_modes_to_samples">
+<span class="sig-name descname"><span class="pre">match_modes_to_samples</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spread_3d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><span class="pre">AcousticField</span></a></span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.match_modes_to_samples" title="Link to this definition">¶</a></dt>
+<dd><p>Sets a regression problem (least-squares) for the sample residuals between the samples and VA mode basis
+and solves it with a pseudo-inverse (see Section 2.4 in <a class="reference external" href="https://doi.org/10.1016/j.enganabound.2025.106308">https://doi.org/10.1016/j.enganabound.2025.106308</a>).
+The problem is set up on an auxiliary coordinate system  closer to the samples (at x_ref) is defined close to
+the samples to improve conditioning. The modal amplitudes computed at this referential are then converted
+into the original coordinate system (x=0) and the individual mode amplitudes updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>side</strong> (<em>str</em><em>, </em><em>optional</em>) – Which set of modes should be used for the mode decomposition (side = “downwind” sets the procedure use the
+downwind modal set, “upwind” sets it to use the upwind modes).</p></li>
+<li><p><strong>spread_3d</strong> (<em>bool</em><em>, </em><em>optional</em>) – Toggles the use of a correction factor accounting for spherical spreading when decomposing into the modes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.vamd.VAMD.save_modes_in_txt">
+<span class="sig-name descname"><span class="pre">save_modes_in_txt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.vamd.VAMD.save_modes_in_txt" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>saves the present mode basis in .txt files with</dt><dd><p>the save_the_modes_in_txt method in the acoustic field attribute.</p>
+</dd>
+</dl>
+<p>For N number of modes with eigenvectors of size K, the .txt file has the following format:</p>
+<p>height[0]       eigenvector_mode_1[0]       …     eigenvector_mode_N[0]
+…             …                         …     …
+height[K]       eigenvector_mode_1[K]       …     eigenvector_mode_N[K]
+###             amplitude_mode_1            …     amplitude_mode_N
+###             eigenvalue_mode_1           …     eigenvalue_mode_N
+###             ref_wavenumber_mode_1       …     ref_wavenumber_mode_N</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Vertical Atmospheric Mode Decomposition</a><ul>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD"><code class="docutils literal notranslate"><span class="pre">VAMD</span></code></a><ul>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.acoustic_field"><code class="docutils literal notranslate"><span class="pre">VAMD.acoustic_field</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.mode_filter"><code class="docutils literal notranslate"><span class="pre">VAMD.mode_filter</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.x_samples"><code class="docutils literal notranslate"><span class="pre">VAMD.x_samples</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.z_samples"><code class="docutils literal notranslate"><span class="pre">VAMD.z_samples</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.calculate_amp_factors"><code class="docutils literal notranslate"><span class="pre">VAMD.calculate_amp_factors()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.compute_matrix_m"><code class="docutils literal notranslate"><span class="pre">VAMD.compute_matrix_m()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.compute_pseudo_m"><code class="docutils literal notranslate"><span class="pre">VAMD.compute_pseudo_m()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.load_modes_from_txt"><code class="docutils literal notranslate"><span class="pre">VAMD.load_modes_from_txt()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.load_samples_from_txt"><code class="docutils literal notranslate"><span class="pre">VAMD.load_samples_from_txt()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.match_modes_to_samples"><code class="docutils literal notranslate"><span class="pre">VAMD.match_modes_to_samples()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.vamd.VAMD.save_modes_in_txt"><code class="docutils literal notranslate"><span class="pre">VAMD.save_modes_in_txt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="safecomputation.html"
+                          title="previous chapter">SAFE Computation</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="safe_vamd.html"
+                          title="next chapter">Packages</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/vamd.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.html" title="Packages"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="safecomputation.html" title="SAFE Computation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Vertical Atmospheric Mode Decomposition</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2026, Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research group at the German National Metrology Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>safe_vamd.boundary_conditions package &#8212; SAFE-VAMD  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="safe_vamd.dimensionless_quantities package" href="safe_vamd.dimensionless_quantities.html" />
+    <link rel="prev" title="safe_vamd.background_atmospheric_field package" href="safe_vamd.background_atmospheric_field.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.dimensionless_quantities.html" title="safe_vamd.dimensionless_quantities package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.background_atmospheric_field.html" title="safe_vamd.background_atmospheric_field package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="safe_vamd.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">safe_vamd.boundary_conditions package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="safe-vamd-boundary-conditions-package">
+<h1>safe_vamd.boundary_conditions package<a class="headerlink" href="#safe-vamd-boundary-conditions-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition">
+<span id="safe-vamd-boundary-conditions-ground-ingard-myers-boundary-condition-module"></span><h2>safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition module<a class="headerlink" href="#module-safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.</span></span><span class="sig-name descname"><span class="pre">GroundIngardMyersBC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source"><span class="pre">Source</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField"><span class="pre">BackgroundField</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">impedance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that applies the Ingard-Myers boundary condition in the ground plane.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.source">
+<span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.source" title="Link to this definition">¶</a></dt>
+<dd><p>Information about the source held in an instance of the Source class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source">Source</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.background_field">
+<span class="sig-name descname"><span class="pre">background_field</span></span><a class="headerlink" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.background_field" title="Link to this definition">¶</a></dt>
+<dd><p>The fields for the atmospheric background quantities held in an instance of the Ba class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField">BackgroundField</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.impedance">
+<span class="sig-name descname"><span class="pre">impedance</span></span><a class="headerlink" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.impedance" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>complex</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">Complex-value</span> <span class="pre">ground</span> <span class="pre">normalized</span> <span class="pre">surface</span> <span class="pre">impedance.</span></span></dt>
+<dd></dd></dl>
+
+<p>Initializes an instance of the GroundIngardMyersBC class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.apply_bc">
+<span class="sig-name descname"><span class="pre">apply_bc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">_ScalarType_co</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">_ScalarType_co</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">_ScalarType_co</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">_ScalarType_co</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.apply_bc" title="Link to this definition">¶</a></dt>
+<dd><p>Takes the matrices for the cubic eigenvalue problem (A+Bλ+Cλ^2+Cλ^3)p=0
+and inserts the contributions of the IngardMyers impedance boundary condition to the first entry (ground) in
+each.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>NDArray</em>)</p></li>
+<li><p><strong>(</strong><strong>A+Bλ+Cλ^2+Cλ^3</strong><strong>)</strong><strong>.</strong> (<em>Matrix D in the cubic eigenvalue problem</em>)</p></li>
+<li><p><strong>b</strong> (<em>NDArray</em>)</p></li>
+<li><p><strong>(</strong><strong>A+Bλ+Cλ^2+Cλ^3</strong><strong>)</strong><strong>.</strong></p></li>
+<li><p><strong>c</strong> (<em>NDArray</em>)</p></li>
+<li><p><strong>(</strong><strong>A+Bλ+Cλ^2+Cλ^3</strong><strong>)</strong><strong>.</strong></p></li>
+<li><p><strong>d</strong> (<em>NDArray</em>)</p></li>
+<li><p><strong>(</strong><strong>A+Bλ+Cλ^2+Cλ^3</strong><strong>)</strong><strong>.</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-safe_vamd.boundary_conditions">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-safe_vamd.boundary_conditions" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">safe_vamd.boundary_conditions package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition">safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition module</a><ul>
+<li><a class="reference internal" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC"><code class="docutils literal notranslate"><span class="pre">GroundIngardMyersBC</span></code></a><ul>
+<li><a class="reference internal" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.source"><code class="docutils literal notranslate"><span class="pre">GroundIngardMyersBC.source</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.background_field"><code class="docutils literal notranslate"><span class="pre">GroundIngardMyersBC.background_field</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.impedance"><code class="docutils literal notranslate"><span class="pre">GroundIngardMyersBC.impedance</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC.apply_bc"><code class="docutils literal notranslate"><span class="pre">GroundIngardMyersBC.apply_bc()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-safe_vamd.boundary_conditions">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="safe_vamd.background_atmospheric_field.html"
+                          title="previous chapter">safe_vamd.background_atmospheric_field package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="safe_vamd.dimensionless_quantities.html"
+                          title="next chapter">safe_vamd.dimensionless_quantities package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/safe_vamd.boundary_conditions.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.dimensionless_quantities.html" title="safe_vamd.dimensionless_quantities package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.background_atmospheric_field.html" title="safe_vamd.background_atmospheric_field package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="safe_vamd.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">safe_vamd.boundary_conditions package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2026, Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research group at the German National Metrology Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>

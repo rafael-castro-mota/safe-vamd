@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>safe_vamd.dimensionless_quantities package &#8212; SAFE-VAMD  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="safe_vamd.mathematical_functions package" href="safe_vamd.mathematical_functions.html" />
+    <link rel="prev" title="safe_vamd.boundary_conditions package" href="safe_vamd.boundary_conditions.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.mathematical_functions.html" title="safe_vamd.mathematical_functions package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.boundary_conditions.html" title="safe_vamd.boundary_conditions package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="safe_vamd.html" accesskey="U">Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">safe_vamd.dimensionless_quantities package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="safe-vamd-dimensionless-quantities-package">
+<h1>safe_vamd.dimensionless_quantities package<a class="headerlink" href="#safe-vamd-dimensionless-quantities-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-safe_vamd.dimensionless_quantities.mach_number">
+<span id="safe-vamd-dimensionless-quantities-mach-number-module"></span><h2>safe_vamd.dimensionless_quantities.mach_number module<a class="headerlink" href="#module-safe_vamd.dimensionless_quantities.mach_number" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.mach_number.MachNumber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.dimensionless_quantities.mach_number.</span></span><span class="sig-name descname"><span class="pre">MachNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
+<p>The mach number, implemented as a subclass of MathFunc.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.mach_number.MachNumber.c">
+<span class="sig-name descname"><span class="pre">c</span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber.c" title="Link to this definition">¶</a></dt>
+<dd><p>Speed of sound (in m/s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc">MathFunc</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">v.</span> <span class="pre">MathFunc</span></span></dt>
+<dd><p>Wind Velocity (in m/S)</p>
+</dd></dl>
+
+<p>Initializes an instance of MachNumber.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.mach_number.MachNumber.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the derivative with respect to height of the mach number at z(s)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the derivative with respect to height of the mach number at z(s)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.mach_number.MachNumber.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber.value" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the mach number at z(s)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the mach number at z(s)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-safe_vamd.dimensionless_quantities.wave_number">
+<span id="safe-vamd-dimensionless-quantities-wave-number-module"></span><h2>safe_vamd.dimensionless_quantities.wave_number module<a class="headerlink" href="#module-safe_vamd.dimensionless_quantities.wave_number" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number.WaveNumber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.dimensionless_quantities.wave_number.</span></span><span class="sig-name descname"><span class="pre">WaveNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">w</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
+<p>The wave number, implemented as a subclass of MathFunc.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number.WaveNumber.c">
+<span class="sig-name descname"><span class="pre">c</span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.c" title="Link to this definition">¶</a></dt>
+<dd><p>Speed of sound (in m/S).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc">MathFunc</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number.WaveNumber.w">
+<span class="sig-name descname"><span class="pre">w</span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.w" title="Link to this definition">¶</a></dt>
+<dd><p>Excitation Frequency (in rads/s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc">MathFunc</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>Initializes an instance of WaveNumber.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number.WaveNumber.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the derivative with respect to height of the wave number at z(s)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the derivative with respect to height of the wave number at z(s)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number.WaveNumber.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.value" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the wave number at z(s)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the wave number at z(s)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-safe_vamd.dimensionless_quantities.wave_number_with_absorption">
+<span id="safe-vamd-dimensionless-quantities-wave-number-with-absorption-module"></span><h2>safe_vamd.dimensionless_quantities.wave_number_with_absorption module<a class="headerlink" href="#module-safe_vamd.dimensionless_quantities.wave_number_with_absorption" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.dimensionless_quantities.wave_number_with_absorption.</span></span><span class="sig-name descname"><span class="pre">WaveNumberWithAbsorption</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source"><span class="pre">Source</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">backfield</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField"><span class="pre">BackgroundField</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
+<p>The wave number with an added imaginary term to account for air absorption, implemented as subclass of MathFunc:
+The air absorption is computed with the methodology in <a class="reference external" href="https://doi.org/10.1121/1.412989">https://doi.org/10.1121/1.412989</a>.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.source">
+<span class="sig-name descname"><span class="pre">source</span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.source" title="Link to this definition">¶</a></dt>
+<dd><p>An instance of the Source class with monopole source information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source">Source</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="simple">
+<dt>backfield:<span class="classifier">BackgroundField</span></dt><dd><p>An instance of the BackgroundField class representing the atmospheric background field.</p>
+</dd>
+<dt>c: MathFunc</dt><dd><p>Speed of sound (in m/S).</p>
+</dd>
+</dl>
+<p>Initializes an instance of the WaveNumberWithAbsorption.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the derivative with respect to height of the wave number at z(s),
+disregarding the air absorption imaginary term</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Value(s) of the derivative with respect to height of the wave number at z(s), disregarding the</dt><dd><p>air absorption imaginary term</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.value" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the wave number with the added air absorption at z(s)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the wave number with the added air absorption at z(s)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-safe_vamd.dimensionless_quantities">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-safe_vamd.dimensionless_quantities" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">safe_vamd.dimensionless_quantities package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-safe_vamd.dimensionless_quantities.mach_number">safe_vamd.dimensionless_quantities.mach_number module</a><ul>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber"><code class="docutils literal notranslate"><span class="pre">MachNumber</span></code></a><ul>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber.c"><code class="docutils literal notranslate"><span class="pre">MachNumber.c</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber.dvalue"><code class="docutils literal notranslate"><span class="pre">MachNumber.dvalue()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.mach_number.MachNumber.value"><code class="docutils literal notranslate"><span class="pre">MachNumber.value()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-safe_vamd.dimensionless_quantities.wave_number">safe_vamd.dimensionless_quantities.wave_number module</a><ul>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber"><code class="docutils literal notranslate"><span class="pre">WaveNumber</span></code></a><ul>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.c"><code class="docutils literal notranslate"><span class="pre">WaveNumber.c</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.w"><code class="docutils literal notranslate"><span class="pre">WaveNumber.w</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.dvalue"><code class="docutils literal notranslate"><span class="pre">WaveNumber.dvalue()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number.WaveNumber.value"><code class="docutils literal notranslate"><span class="pre">WaveNumber.value()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-safe_vamd.dimensionless_quantities.wave_number_with_absorption">safe_vamd.dimensionless_quantities.wave_number_with_absorption module</a><ul>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption"><code class="docutils literal notranslate"><span class="pre">WaveNumberWithAbsorption</span></code></a><ul>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.source"><code class="docutils literal notranslate"><span class="pre">WaveNumberWithAbsorption.source</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.dvalue"><code class="docutils literal notranslate"><span class="pre">WaveNumberWithAbsorption.dvalue()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.dimensionless_quantities.wave_number_with_absorption.WaveNumberWithAbsorption.value"><code class="docutils literal notranslate"><span class="pre">WaveNumberWithAbsorption.value()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-safe_vamd.dimensionless_quantities">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="safe_vamd.boundary_conditions.html"
+                          title="previous chapter">safe_vamd.boundary_conditions package</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="safe_vamd.mathematical_functions.html"
+                          title="next chapter">safe_vamd.mathematical_functions package</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/safe_vamd.dimensionless_quantities.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.mathematical_functions.html" title="safe_vamd.mathematical_functions package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="safe_vamd.boundary_conditions.html" title="safe_vamd.boundary_conditions package"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >SAFE-VAMD</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="safe_vamd.html" >Packages</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">safe_vamd.dimensionless_quantities package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2026, Rafael Castro-Mota, Paul Williams, Stefan Jacob. Infrasound research group at the German National Metrology Institute.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    </div>
+  </body>
+</html>
