@@ -283,21 +283,11 @@ def kirby_solver_lagrange(mesh: Mesh1D, background_field: BackgroundField, sourc
     time1 = perf_counter()
     print("Matrix assembly took:", time1 - time0, 's')
 
-    current, peak = tracemalloc.get_traced_memory()
-    print(f"Current matrix creation: {current / 1024 ** 2:.2f} MB")
-    print(f"Peak matrix_creation:    {peak / 1024 ** 2:.2f} MB")
-    tracemalloc.reset_peak()
-
     time2 = perf_counter()
     # Solving the eigenvalue problem ( (A - Bγ - Cγ^2 - Dγ^3)p = 0)
     vals, vecs = cubic_eigen_solver(a, b, c, d)
     time3 = perf_counter()
-    print("Solving the eigenvalue prob took:", time3 - time2, 's')
-
-    current, peak = tracemalloc.get_traced_memory()
-    print(f"Solving eigenvalue problem: {current / 1024 ** 2:.2f} MB")
-    print(f"Peak Solving eigenvalue problem:    {peak / 1024 ** 2:.2f} MB")
-    tracemalloc.reset_peak()
+    print("Solving the eigenvalue problem took:", time3 - time2, 's')
 
     time4 = perf_counter()
 
@@ -345,18 +335,13 @@ def kirby_solver_lagrange(mesh: Mesh1D, background_field: BackgroundField, sourc
     plt.figure()
     plt.scatter(np.real(upwind_vals), np.imag(upwind_vals), color='blue', label='upwind modes')
     plt.scatter(np.real(downwind_vals), np.imag(downwind_vals), color='red', label='downwind modes')
-    plt.title("Mode eigenvalues λ")
-    plt.xlabel("Real(λ)")
-    plt.xlabel("Imag(λ)")
+    plt.title("Mode eigenvalues λ", fontsize=12)
+    plt.xlabel("Real(λ)", fontsize=12)
+    plt.xlabel("Imag(λ)", fontsize=12)
     plt.legend()
     plt.show()
     time5 = perf_counter()
     print('Separating the modes and creating classes took:', time5 - time4, 's')
-
-    current, peak = tracemalloc.get_traced_memory()
-    print(f"other: {current / 1024 ** 2:.2f} MB")
-    print(f"other:    {peak / 1024 ** 2:.2f} MB")
-    tracemalloc.reset_peak()
 
     return acoustic_field
 

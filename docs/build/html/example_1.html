@@ -44,7 +44,12 @@
             
   <section id="example-1">
 <h1>Example 1<a class="headerlink" href="#example-1" title="Link to this heading">¶</a></h1>
-<p>Short description about the problem and link it with the article and the schematic?</p>
+<p>The large-scale, low-frequency sound propagation in <a class="reference external" href="https://doi.org/10.1121/10.0003567">https://doi.org/10.1121/10.0003567</a> (Figure 11),
+<a class="reference external" href="http://dx.doi.org/10.1121/1.4976067">http://dx.doi.org/10.1121/1.4976067</a> (Figure 7) and <a class="reference external" href="https://doi.org/10.1016/j.enganabound.2025.106308">https://doi.org/10.1016/j.enganabound.2025.106308</a> (Figure 4) is
+solved with the package. The problem is of particular interest because of the complex atmospheric conditions and the
+resulting atmopsheric waveguides that are formed at low-, medium- and high-altitudes.</p>
+<p>This example follows the workflow depicted in Schematic 1 in (inserir link) and
+the results are detailed in Section 3.1 of the same article.</p>
 <section id="computing-the-vertical-atmospheric-va-modes">
 <h2>Computing the Vertical Atmospheric (VA) Modes<a class="headerlink" href="#computing-the-vertical-atmospheric-va-modes" title="Link to this heading">¶</a></h2>
 <p>A Safe computation must be initiated.</p>
@@ -52,46 +57,51 @@
 <span class="n">safe_comp</span> <span class="o">=</span> <span class="n">SAFEComputation</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>The estup step can be run with:</p>
+<p>The setup of the computation can be run with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">input_file</span> <span class="o">=</span> <span class="s2">&quot;example_1_atmo_cond.txt&quot;</span>
 <span class="n">safe_comp</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">rho_at_ground</span><span class="o">=</span><span class="mf">1.235</span><span class="p">,</span> <span class="n">g_value</span><span class="o">=</span><span class="mf">9.81</span><span class="p">,</span> <span class="n">pml_thick_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The .txt file with the background atmospheric conditions is given in the example folder under the name “example_1_atmo_cond.txt”
-and has the following format:</p>
+<p>The <em>.txt</em> file with the background atmospheric conditions is given in the example folder under the name “example_1_atmo_cond.txt”.
+It has the following format:</p>
 <img alt="_images/example_1_atmo_cond.png" src="_images/example_1_atmo_cond.png" />
-<p>The VA modes can be solve with:</p>
+<p>After setting up, the VA modes can be computed with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">acoustic_field</span> <span class="o">=</span> <span class="n">safe_comp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">alpha_value</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">air_absorption</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>, and then exported into .txt files with:</p>
+<p>, where the parameter <em>alpha_value</em> is a term for added absorption in the Perfectly Matched Layer.
+In this example, air absorption is not accounted for.</p>
+<p>After the modes have been computed, a figure with the mode eignevalues plotted in the complex-plane will show up.
+The user can double check if the modes have been correctly separated into downwind and upwind.</p>
+<img alt="_images/example_1_safecomp_eigenvalues.png" src="_images/example_1_safecomp_eigenvalues.png" />
+<p>The VA modes can, finally, be exported into <em>.txt</em> files with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">safe_comp</span><span class="o">.</span><span class="n">save_modes_in_txt</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>An image with the computed eigenvalues in the real-complex plane will show up.</p>
-<img alt="_images/example_1_eigenvalues.png" src="_images/example_1_eigenvalues.png" />
 </section>
 <section id="matching-the-va-modes-to-the-acosutic-pressure-samples">
 <h2>Matching the VA modes to the acosutic pressure samples.<a class="headerlink" href="#matching-the-va-modes-to-the-acosutic-pressure-samples" title="Link to this heading">¶</a></h2>
-<p>Meter fotos dos ficheros txt e assim.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">safe_vamd.vamd</span><span class="w"> </span><span class="kn">import</span> <span class="n">VAMD</span>
-<span class="n">vamd</span> <span class="o">=</span> <span class="n">VAMD</span><span class="p">()</span>
+<p>Vertical Atmospheric Mode Decomposition can be applied with the methods in the <em>VAMD</em> class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>   <span class="kn">from</span><span class="w"> </span><span class="nn">safe_vamd.vamd</span><span class="w"> </span><span class="kn">import</span> <span class="n">VAMD</span>
+   <span class="n">vamd</span> <span class="o">=</span> <span class="n">VAMD</span><span class="p">()</span>
+
+
+<span class="n">After</span> <span class="n">the</span> <span class="n">VA</span> <span class="n">modes</span> <span class="n">have</span> <span class="n">been</span> <span class="n">computed</span> <span class="ow">and</span> <span class="n">stored</span> <span class="ow">in</span> <span class="o">*.</span><span class="n">txt</span><span class="o">*</span> <span class="n">files</span><span class="p">,</span> <span class="n">they</span> <span class="n">can</span> <span class="n">be</span> <span class="n">loaded</span><span class="p">:</span>
 </pre></div>
 </div>
-<p>The modes can then be loaded:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">downwind_path</span> <span class="o">=</span> <span class="s2">&quot;downwind_modes.txt&quot;</span>
 <span class="n">upwind_path</span> <span class="o">=</span> <span class="s2">&quot;upwind_modes.txt&quot;</span>
 <span class="n">vamd</span><span class="o">.</span><span class="n">load_modes_from_txt</span><span class="p">(</span><span class="n">downwind_path</span><span class="o">=</span><span class="n">down_path</span><span class="p">,</span> <span class="n">upwind_path</span><span class="o">=</span><span class="n">up_path</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>and then filtered:</p>
+<p>and then filtered by resorting to the methods in the <em>mode_filter</em> attribute:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_desired_modes</span> <span class="o">=</span> <span class="mi">320</span>  <span class="c1"># (or 380)</span>
 <span class="n">vamd</span><span class="o">.</span><span class="n">mode_filter</span><span class="o">.</span><span class="n">sort_by_imag_part</span><span class="p">(</span><span class="n">side</span><span class="o">=</span><span class="s2">&quot;downwind&quot;</span><span class="p">)</span>  <span class="c1"># sorting from less to more decaying</span>
 <span class="n">vamd</span><span class="o">.</span><span class="n">mode_filter</span><span class="o">.</span><span class="n">filter_by_energy</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">140</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">],</span> <span class="mf">0.95</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;downwind&quot;</span><span class="p">)</span>  <span class="c1"># removing PML modes</span>
 <span class="n">vamd</span><span class="o">.</span><span class="n">acoustic_field</span><span class="o">.</span><span class="n">downwind_modes</span> <span class="o">=</span> <span class="n">vamd</span><span class="o">.</span><span class="n">acoustic_field</span><span class="o">.</span><span class="n">downwind_modes</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n_desired_modes</span><span class="p">]</span>  <span class="c1"># truncating mode basis</span>
 </pre></div>
 </div>
-<p>the mode eigenvalues can be plotted before the mode filtering:</p>
+<p>To ensure the correct filtering of the modes, their eigenvalues can be plotted before and after filtering has been applied:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vamd</span><span class="o">.</span><span class="n">mode_filter</span><span class="o">.</span><span class="n">plot_eigenvalues</span><span class="p">(</span><span class="n">upwind_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">downwind_color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span>
 <span class="c1">### any mode fitlering here ###</span>
 <span class="n">vamd</span><span class="o">.</span><span class="n">mode_filter</span><span class="o">.</span><span class="n">plot_eigenvalues</span><span class="p">(</span><span class="n">upwind_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">downwind_color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span>
@@ -104,11 +114,17 @@ and has the following format:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vamd</span><span class="o">.</span><span class="n">load_samples_from_txt</span><span class="p">(</span><span class="s2">&quot;./samples/samples_x=7p5km+10km.txt&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>the .txt files with the acoustic pressure samples has the following format:</p>
-<p>the samples can me matched to the samples with:</p>
+<p>the <em>.txt</em> files with the acoustic pressure samples has the following format:</p>
+<img alt="_images/example_1_samples.png" src="_images/example_1_samples.png" />
+<p>The samples can be matched to the samples with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">acoustic_field</span> <span class="o">=</span> <span class="n">vamd</span><span class="o">.</span><span class="n">match_modes_to_samples</span><span class="p">(</span><span class="n">spread_3d</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>After the VA modes have been matched to the samples, the example script also includes some post-processing and plotting.
+The generated contour plot for the normalized acoustic pressure is presented here:</p>
+<img alt="_images/example_1_contour_plot.png" src="_images/example_1_contour_plot.png" />
+<p>, along with the transmission (in dB) along a horizontal line 1 km from the ground:</p>
+<img alt="_images/example_1_transmission_1km.png" src="_images/example_1_transmission_1km.png" />
 </section>
 </section>
 
