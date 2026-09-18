@@ -36,53 +36,58 @@ from safe_vamd.dimensionless_quantities.wave_number import WaveNumber
 
 
 class SAFEComputation:
-
     """
     A class that represents an application of the Semi-Analytic Finite-Element (SAFE) method.
 
+    **Class attributes:**
+
     Attributes
     ----------
-    source: Source
-        An instance of the Source class with monopole source information.
-    backgrnd_field: BackgroundField
-        An instance of the BackgroundField class representing the atmospheric background field.
-    mesh: Mesh1D
-        An instance of the Mesh1D class with the finite-elements and nodes.
-    acoustic_field: AcousticField
-        An instance of the AcousticField class with the Vertical Atmospheric (VA) modes
-    alpha: MathFunc
+    source : Source
+        An instance of *Source* with monopole source information.
+    backgrnd_field : BackgroundField
+        An instance of *BackgroundField* representing the atmospheric background field.
+    mesh : 'Mesh1D'
+        An instance of *Mesh1D* with the finite-elements and nodes.
+    acoustic_field : AcousticField
+        An instance of *AcousticField* with the Vertical Atmospheric (VA) mode basis.
+    alpha : MathFunc
         A function to set added absorption in the Perfectly Matched Layer.
-    air_absorv: bool
+    air_absorv : bool
         A boolean to toggle air absorption (air_absorv = True makes the simulation take into account air absorption)
-    ground_impedance_value: complex
+    ground_impedance_value : complex
         The complex-valued normalized surface ground impedance.
 
-    Parameters for initialization.
-    Parameters
-    ----------
-    source: Source, optional
-        An instance of the Source class with monopole source information.
-    backgrnd_field: BackgroundField, optional
-        An instance of the BackgroundField class representing the atmospheric background field.
-    mesh: Mesh1D, optional
-        An instance of the Mesh1D class with the finite-elements and nodes.
-    acoustic_field: AcousticField, optional
-        An instance of the AcousticField class with the Vertical Atmospheric (VA) modes
-    alpha_value: float, optional:
-        A value to set added absorption in the Perfectly Matched Layer.
-    air_absorv: bool, optional
-        A boolean to toggle air absorption (air_absorv = True makes the simulation take into account air absorption)
-    ground_impedance_value: complex
-        The complex-valued normalized surface ground impedance.
     """
     def __init__(self, source: Source = None, backgrnd_field: BackgroundField = None, mesh: Mesh1D = None,
                  acoustic_field: AcousticField = None, alpha_value: float = 0.2, air_absorv: bool = False,
                  ground_impedance_value: complex = None):
+        """
+
+        Parameters
+        ----------
+        source : Source, optional
+            An instance of *Source* with monopole source information.
+        backgrnd_field : BackgroundField, optional
+            An instance of *BackgroundField* representing the atmospheric background field.
+        mesh : Mesh1D, optional
+            An instance of *Mesh1D* with the finite-elements and nodes.
+        acoustic_field : AcousticField, optional
+            An instance of *AcousticField* with the Vertical Atmospheric (VA) mode basis.
+        alpha_value : float, optional:
+            A value to set added absorption in the Perfectly Matched Layer.
+        air_absorv : bool, optional
+            A boolean to toggle air absorption (air_absorv = True) makes the computation take air absorption
+            into account.
+        ground_impedance_value : complex, optional
+            The complex-valued normalized surface ground impedance.
+
+        """
 
         self.mesh = mesh
-        self.source = source  # Point Source Object (Type: Source)
-        self.backgrnd_field = backgrnd_field  # Atmospheric Background Field (Type: BckgrndField)
-        self.acoustic_field = acoustic_field    # Acoustic Field
+        self.source = source
+        self.backgrnd_field = backgrnd_field
+        self.acoustic_field = acoustic_field
 
         self.alpha = ConstFunc(alpha_value)  # Added attenuation in the PML [dB/λ]
         self.air_absorv = air_absorv  # True if the acoustic field was computed taking into account air absorption.
@@ -91,21 +96,23 @@ class SAFEComputation:
     def setup(self, input_file: str, f: float, rho_at_ground: float, g_value: float = 9.81,
               pml_thick_factor: float = 2) -> None:
         """
-        Builds the necessary objects related to the computational mesh and background atmospheric field from an inputted
-        test file a header and columns for height, temperature, wind-velocity and relative humidity.
+        Builds the objects related to the computational mesh and background atmospheric field from an inputted
+        *.txt* file which has a header followed by columns for height (in :math:`m`), temperature (in :math:`K`),
+        wind-velocity (in :math:`ms^{-1}`) and relative humidity (in :math:`\%`).
 
         Parameters
         ----------
         input_file: str
-            Path to the input test file.
+            Path to the input *.txt* file with the atmospheric conditions.
         f: float
-            Excitation frequency (in Hz)
+            Excitation frequency (in :math:`Hz`)
         rho_at_ground: float
-            Value of the air density at ground level.
+            Value of the air density (in :math:`kgm^{-3}`) at ground level.
         g_value: float, optional
-            Value for the acceleration of gravity.
+            Value for the acceleration of gravity (in :math:`ms^{-2}`).
         pml_thick_factor: float, optional
-            Parameter that controls the thickness of the Perfectly Matched
+            A unitless parameter that controls the thickness of the Perfectly Matched in proportion to
+            the maximum wavelength.
 
         Returns
         -------
@@ -212,22 +219,12 @@ class SAFEComputation:
         self.acoustic_field = None
         time1 = perf_counter()
         print('Setting up took:', time1 - time0, 's')
-        return 1
-
-    def set_alpha(self, alpha_value: float):
-        self.alpha = ConstFunc(alpha_value)
-
-    def toggle_air_absorv(self, air_absorv: float):
-        pass
-
-    def set_ground_impedance(self, ground_impedance_value: complex):
-        pass
 
     def solve(self, ground_impedance_value: complex = None, alpha_value: float = 0.2,
               air_absorption: bool = False) -> AcousticField:
         """
-        Assembles the necessary matrices for the cubic eigenvalue problem and solves it by using the function
-        kirby_solver_lagrange.
+        Assembles the matrices for the cubic eigenvalue problem (:math:'A + B\lambda + C\lambda^2 +D\lambda^4')
+        and solves it by using the function kirby_solver_lagrange.
 
         Parameters
         ----------
@@ -235,6 +232,7 @@ class SAFEComputation:
             A parameter to set added absorption in the Perfectly Matched Layer.
         air_absorption: bool
             A boolean to toggle air absorption (air_absorv = True makes the simulation take into account air absorption)
+            .
         ground_impedance_value: complex
             The complex-valued normalized surface ground impedance.
 
@@ -271,9 +269,9 @@ class SAFEComputation:
         Parameters
         ----------
         source_height: float
-            Height (in meters) of the monopole.
-        source_amplitude:
-            Amplitude (in kg/(m^-3 s)) of the monopole.
+            Height (in :math:`m`) of the monopole.
+        source_amplitude: float
+            Amplitude  (in :math:`kgm^{-3}s^{-1}`) of the monopole.
         side: str
             Which set of modes should be used for the mode decomposition (side = "downwind" sets the procedure use the
             downwind modal set, "upwind" sets it to use the upwind modes).
@@ -381,18 +379,28 @@ class SAFEComputation:
         return self.acoustic_field
 
     def save_modes_in_txt(self) -> None:
-        """
-        saves the upwind and downwind modes in separate .txt files with
-         the save_the_modes_in_txt method in the acoustic field attribute.
+        r"""
+        Saves the upwind and downwind modes in separate *.txt* files with
+        the *save_modes_in_txt* method in the *acoustic_field* attribute.
 
-        For N number of modes with eigenvectors of size K, the .txt file has the following format:
+        For :math:`K` number of VA modes with eigenvectors of size .math:`N`, the *.txt* file has the following format:
 
-        height[0]       eigenvector_mode_1[0]       ...     eigenvector_mode_N[0]
-        ...             ...                         ...     ...
-        height[K]       eigenvector_mode_1[K]       ...     eigenvector_mode_N[K]
-        ###             amplitude_mode_1            ...     amplitude_mode_N
-        ###             eigenvalue_mode_1           ...     eigenvalue_mode_N
-        ###             ref_wavenumber_mode_1       ...     ref_wavenumber_mode_N
+        .. math::
+
+           \begin{matrix}
+              z_1 & p_1(z_1) & \dots & p_K(z_1) \\
+              \dots & \dots & \dots & \dots \\
+              z_N & p_1(z_N) & \dots & p_K(z_N) \\
+              \hline
+              \text{#} & A_1 & \dots & A_K \\
+              \text{#} & \lambda_1 & \dots & \lambda_K \\
+              \text{#} & k^{ref}_1 & \dots & k^{ref}_K
+           \end{matrix}
+
+        , where :math:`p_i(z_j)` represents the vertical shape at height :math:`z_j`, :math:`A_i`
+        the mode amplitude,
+        :math:`\lambda_i` the eigenvalue, and :math:`k^{ref}_i` the reference wavenumber for mode i.
+        The symbol # represents irrelevant information in the *.txt* file.
 
         Returns
         -------

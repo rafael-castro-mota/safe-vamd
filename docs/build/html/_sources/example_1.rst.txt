@@ -1,5 +1,6 @@
-Example 1
-==========
+Example 1 - Infrasound propagation in a large-scale atmosphere
+==============================================================
+
 The large-scale, low-frequency sound propagation in https://doi.org/10.1121/10.0003567 (Figure 11),
 http://dx.doi.org/10.1121/1.4976067 (Figure 7) and https://doi.org/10.1016/j.enganabound.2025.106308 (Figure 4) is
 solved with the package. The problem is of particular interest because of the complex atmospheric conditions and the
@@ -22,8 +23,8 @@ The setup of the computation can be run with:
 
 .. code-block:: python
 
-    input_file = "example_1_atmo_cond.txt"
-    safe_comp.setup(input_file, 180, rho_at_ground=1.235, g_value=9.81, pml_thick_factor=2)
+    input_file = 'example_1_atmo_cond.txt'
+    safe_comp.setup(input_file, 0.5, rho_at_ground=1.23, g_value=0, pml_thick_factor=2)
 
 The *.txt* file with the background atmospheric conditions is given in the example folder under the name "example_1_atmo_cond.txt".
 It has the following format:
@@ -51,7 +52,7 @@ The VA modes can, finally, be exported into *.txt* files with:
     safe_comp.save_modes_in_txt()
 
 
-Matching the VA modes to the acosutic pressure samples.
+Matching the VA modes to the acoustic pressure samples.
 -------------------------------------------------------
 
 Vertical Atmospheric Mode Decomposition can be applied with the methods in the *VAMD* class:
@@ -98,7 +99,7 @@ The samples can be loaded with:
 
     vamd.load_samples_from_txt("./samples/samples_x=7p5km+10km.txt")
 
-the *.txt* files with the acoustic pressure samples has the following format:
+The *.txt* files with the acoustic pressure samples has the following format:
 
 .. image:: figures/example_1_samples.png
 

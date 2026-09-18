@@ -53,7 +53,7 @@
 <span id="safe-vamd-solver-acoustic-field-module"></span><h2>safe_vamd.solver.acoustic_field module<a class="headerlink" href="#module-safe_vamd.solver.acoustic_field" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.acoustic_field.</span></span><span class="sig-name descname"><span class="pre">AcousticField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downwind_modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#safe_vamd.solver.mode.Mode" title="safe_vamd.solver.mode.Mode"><span class="pre">Mode</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upwind_modes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#safe_vamd.solver.mode.Mode" title="safe_vamd.solver.mode.Mode"><span class="pre">Mode</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.acoustic_field.</span></span><span class="sig-name descname"><span class="pre">AcousticField</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">downwind_modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upwind_modes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class that represents a two-dimensional acoustic field comprised of a superposition of downwind or upwind
 vertical atmospheric (VA) modes. At the ‘right’ of the range origin (x&gt;0), the field is assumed to be comprised
@@ -82,73 +82,8 @@ of only downwind modes and on the ‘left’ (x&lt;0) of only upwind modes.</p>
 
 <p>Initializes an instance of AcousticField.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.get_plot_data">
-<span class="sig-name descname"><span class="pre">get_plot_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rangos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.get_plot_data" title="Link to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Generates plot data by defining a grid with the prescribed ranges and the heights of the</dt><dd><p>nodes in the computational mesh and evaluates the acoustic field at those points.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>rangos</strong> (<em>Sequence</em><em>[</em><em>float</em><em>]</em>) – Ranges (in meters) at which to evaluate the acoustic field.</p></li>
-<li><p><strong>side</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
-<dt>Set of modes used to compute the plot data (side=’downwind’ for downwind modes and</dt><dd><p>side=’upwind’ for the upwind modes)</p>
-</dd>
-</dl>
-</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p><dl class="simple">
-<dt>A tuple containing matrices for the ranges,</dt><dd><p>height and complex-valued acoustic pressure amplitudes at each grid point.</p>
-</dd>
-</dl>
-</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>tuple[np.ndarray, np.ndarray, np.ndarray]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.load_modes_from_txt">
-<span class="sig-name descname"><span class="pre">load_modes_from_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.load_modes_from_txt" title="Link to this definition">¶</a></dt>
-<dd><p>Loads the VA modes from a text file. Setting side=’downwind’ loads the downwind modes from the files and
-side=’upwind’ loads the upwind modes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mode_path</strong> (<em>str</em>) – Path to the text file with modes.</p></li>
-<li><p><strong>side</strong> (<em>str</em><em>, </em><em>optional</em>) – Selects the set of modes to be loaded (side=’downwind’ loads the downwind modes
-and side=’upwind’ the upwind ones)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.save_modes_in_txt">
-<span class="sig-name descname"><span class="pre">save_modes_in_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.save_modes_in_txt" title="Link to this definition">¶</a></dt>
-<dd><p>Saves either the downwind or upwind modes into a txt file (side=’downwind’ saves the downwind modes
-and side=’upwind’ saves the upwind modes). By default, it saves the downwind modes.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>side</strong> (<em>str</em><em>, </em><em>optional</em>) – Which set of modes to save (side=’downwind’ saves the downwind modes and side=’upwind’ saves the upwind modes)</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>The complex-valued amplitude of the acoustic field at (x, z) with spherical spreading accounted for.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.value_2d">
-<span class="sig-name descname"><span class="pre">value_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">complex</span></span></span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.value_2d" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">value_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.value_2d" title="Link to this definition">¶</a></dt>
 <dd><p>Evaluates the acoustic field at (x, z)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -165,7 +100,7 @@ and side=’upwind’ saves the upwind modes). By default, it saves the downwind
 
 <dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.value_2d_with_3d_spread">
-<span class="sig-name descname"><span class="pre">value_2d_with_3d_spread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.value_2d_with_3d_spread" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">value_2d_with_3d_spread</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ref</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.value_2d_with_3d_spread" title="Link to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Evaluates the acoustic field at (x, z) with spherical spreading accounted for</dt><dd><p>with a correction factor (1/√(x/x_ref)).</p>
 </dd>
@@ -184,6 +119,72 @@ and side=’upwind’ saves the upwind modes). By default, it saves the downwind
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.save_modes_in_txt">
+<span class="sig-name descname"><span class="pre">save_modes_in_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.save_modes_in_txt" title="Link to this definition">¶</a></dt>
+<dd><p>Saves either the downwind or upwind modes into a txt file (side=’downwind’ saves the downwind modes
+and side=’upwind’ saves the upwind modes). By default, it saves the downwind modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>side</strong> (<em>str, optional</em>) – Which set of modes to save (side=’downwind’ saves the downwind modes and side=’upwind’ saves the upwind modes)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The complex-valued amplitude of the acoustic field at (x, z) with spherical spreading accounted for.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.load_modes_from_txt">
+<span class="sig-name descname"><span class="pre">load_modes_from_txt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.load_modes_from_txt" title="Link to this definition">¶</a></dt>
+<dd><p>Loads the VA modes from a text file. Setting side=’downwind’ loads the downwind modes from the files and
+side=’upwind’ loads the upwind modes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode_path</strong> (<em>str</em>) – Path to the text file with modes.</p></li>
+<li><p><strong>side</strong> (<em>str, optional</em>) – Selects the set of modes to be loaded (side=’downwind’ loads the downwind modes
+and side=’upwind’ the upwind ones)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.solver.acoustic_field.AcousticField.get_plot_data">
+<span class="sig-name descname"><span class="pre">get_plot_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rangos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.acoustic_field.AcousticField.get_plot_data" title="Link to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Generates plot data by defining a grid with the prescribed ranges and the heights of the</dt><dd><p>nodes in the computational mesh and evaluates the acoustic field at those points.</p>
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul>
+<li><p><strong>rangos</strong> (<em>Sequence[float]</em>) – Ranges (in meters) at which to evaluate the acoustic field.</p></li>
+<li><p><strong>side</strong> (<em>str, optional</em>) –</p>
+<dl class="simple">
+<dt>Set of modes used to compute the plot data (side=’downwind’ for downwind modes and</dt><dd><p>side=’upwind’ for the upwind modes)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>A tuple containing matrices for the ranges,</dt><dd><p>height and complex-valued acoustic pressure amplitudes at each grid point.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple[np.ndarray, np.ndarray, np.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -191,26 +192,28 @@ and side=’upwind’ saves the upwind modes). By default, it saves the downwind
 <span id="safe-vamd-solver-kirby-solver-lagrange-module"></span><h2>safe_vamd.solver.kirby_solver_lagrange module<a class="headerlink" href="#module-safe_vamd.solver.kirby_solver_lagrange" title="Link to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="safe_vamd.solver.kirby_solver_lagrange.kirby_solver_lagrange">
-<span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.kirby_solver_lagrange.</span></span><span class="sig-name descname"><span class="pre">kirby_solver_lagrange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mesh.html#safe_vamd.mesh.mesh_1d.Mesh1D" title="safe_vamd.mesh.mesh_1d.Mesh1D"><span class="pre">Mesh1D</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField"><span class="pre">BackgroundField</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source"><span class="pre">Source</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_condition</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.boundary_conditions.html#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC" title="safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC"><span class="pre">GroundIngardMyersBC</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><span class="pre">AcousticField</span></a></span></span><a class="headerlink" href="#safe_vamd.solver.kirby_solver_lagrange.kirby_solver_lagrange" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.kirby_solver_lagrange.</span></span><span class="sig-name descname"><span class="pre">kirby_solver_lagrange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">background_field</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">absor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary_condition</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.kirby_solver_lagrange.kirby_solver_lagrange" title="Link to this definition">¶</a></dt>
 <dd><p>Assembles the finite-element matrices for the cubic eigenvalue problem (A + Bλ + Cλ^2 + Dλ^3)p = 0, solves it and
 creates an acoustic field with the computed upwind and downwind vertical atmospheric (VA) modes</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>mesh</strong> (<a class="reference internal" href="safe_vamd.mesh.html#safe_vamd.mesh.mesh_1d.Mesh1D" title="safe_vamd.mesh.mesh_1d.Mesh1D"><em>Mesh1D</em></a>)</p></li>
-<li><p><strong>background_field</strong> (<a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField" title="safe_vamd.background_atmospheric_field.background_field.BackgroundField"><em>BackgroundField</em></a>) – The atmospheric background fields.</p></li>
-<li><p><strong>source</strong> (<a class="reference internal" href="safe_vamd.source.html#safe_vamd.source.source.Source" title="safe_vamd.source.source.Source"><em>Source</em></a>) – Information related to a monopole source.</p></li>
+<dd class="field-odd"><ul>
+<li><p><strong>mesh</strong> (<em>Mesh1D</em>)</p></li>
+<li><p><strong>background_field</strong> (<em>BackgroundField</em>) – The atmospheric background fields.</p></li>
+<li><p><strong>source</strong> (<em>Source</em>) – Information related to a monopole source.</p></li>
 <li><p><strong>alpha</strong> (<em>float</em>) – A parameter to set added absorption in the Perfectly Matched Layer.</p></li>
-<li><p><strong>absor</strong> (<em>bool</em><em>, </em><em>optional</em>) – <dl class="simple">
+<li><p><strong>absor</strong> (<em>bool, optional</em>) –</p>
+<dl class="simple">
 <dt>Toggles the use of air absorption in the computation of the modes (absor = True makes the computation take into</dt><dd><p>consideration air absorption).</p>
 </dd>
 </dl>
-</p></li>
-<li><p><strong>boundary_condition</strong> (<a class="reference internal" href="safe_vamd.boundary_conditions.html#safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC" title="safe_vamd.boundary_conditions.ground_ingard_myers_boundary_condition.GroundIngardMyersBC"><em>GroundIngardMyersBC</em></a><em>, </em><em>optional</em>) – <dl class="simple">
+</li>
+<li><p><strong>boundary_condition</strong> (<em>GroundIngardMyersBC, optional</em>) –</p>
+<dl class="simple">
 <dt>An object that applies a IngardMyersBC boundary condition on the ground directly on the cubic</dt><dd><p>eigenvalue problem matrices.</p>
 </dd>
 </dl>
-</p></li>
+</li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -227,7 +230,7 @@ creates an acoustic field with the computed upwind and downwind vertical atmosph
 <span id="safe-vamd-solver-mode-module"></span><h2>safe_vamd.solver.mode module<a class="headerlink" href="#module-safe_vamd.solver.mode" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.mode.</span></span><span class="sig-name descname"><span class="pre">Mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitude</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_coords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigvec</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">complex</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_wn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">complex</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.mode.</span></span><span class="sig-name descname"><span class="pre">Mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_coords</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eigvec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_wn</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
 <p>A class representing an individual vertical atmospheric (VA) mode.</p>
 <dl class="py attribute">
@@ -299,26 +302,61 @@ that includes the imaginary and real parts.</p>
 
 <p>Initializes an instance of Mode</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.dvalue">
-<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.dvalue" title="Link to this definition">¶</a></dt>
-<dd><p>Evaluates the derivative of the modal shape with respect to height at z(s).</p>
+<dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.value" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the modal shape at z(s).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>z: ArrayLike</strong></dt><dd><p>Height(s) (in meters).</p>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
 </dd>
-<dt><strong>Returns</strong></dt><dd></dd>
-<dt><strong>——-</strong></dt><dd></dd>
-<dt><strong>np.ndarray</strong></dt><dd><p>Value(s) of derivative with respect to height of the modal shape at z(s).</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the modal shape at z(s).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the derivative of the modal shape with respect to height at z(s).</p>
+<blockquote>
+<div><dl class="simple">
+<dt>z: ArrayLike</dt><dd><p>Height(s) (in meters).</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>np.ndarray</dt><dd><p>Value(s) of derivative with respect to height of the modal shape at z(s).</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.value_2d">
+<span class="sig-name descname"><span class="pre">value_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.value_2d" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the mode at (x, z).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>ArrayLike</em>) – Range(s) (in meters).</p></li>
+<li><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the mode at (x, z).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.dvalue_x">
-<span class="sig-name descname"><span class="pre">dvalue_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.dvalue_x" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">dvalue_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.dvalue_x" title="Link to this definition">¶</a></dt>
 <dd><p>Evaluates the derivative with respect to range of the mode at (x, z)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -338,7 +376,7 @@ that includes the imaginary and real parts.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.dvalue_z">
-<span class="sig-name descname"><span class="pre">dvalue_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.dvalue_z" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">dvalue_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.dvalue_z" title="Link to this definition">¶</a></dt>
 <dd><p>Evaluates the derivative with respect to height of the mode at (x, z)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -358,45 +396,8 @@ that includes the imaginary and real parts.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.update_cubicspline_eig">
-<span class="sig-name descname"><span class="pre">update_cubicspline_eig</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.pchip_interpolated_func.PchipInterpolator1D" title="safe_vamd.mathematical_functions.pchip_interpolated_func.PchipInterpolator1D"><span class="pre">PchipInterpolator1D</span></a></span></span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.update_cubicspline_eig" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">update_cubicspline_eig</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.update_cubicspline_eig" title="Link to this definition">¶</a></dt>
 <dd><p>Interpolates the real and imaginary parts of the mode eigenvector with a PchipInterpolator1D.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.value">
-<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.value" title="Link to this definition">¶</a></dt>
-<dd><p>Evaluates the modal shape at z(s).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value(s) of the modal shape at z(s).</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.mode.Mode.value_2d">
-<span class="sig-name descname"><span class="pre">value_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode.Mode.value_2d" title="Link to this definition">¶</a></dt>
-<dd><p>Evaluates the mode at (x, z).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>ArrayLike</em>) – Range(s) (in meters).</p></li>
-<li><p><strong>z</strong> (<em>ArrayLike</em>) – Height(s) (in meters).</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value(s) of the mode at (x, z).</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
-</dd>
-</dl>
 </dd></dl>
 
 </dd></dl>
@@ -406,29 +407,66 @@ that includes the imaginary and real parts.</p>
 <span id="safe-vamd-solver-mode-filter-module"></span><h2>safe_vamd.solver.mode_filter module<a class="headerlink" href="#module-safe_vamd.solver.mode_filter" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.mode_filter.</span></span><span class="sig-name descname"><span class="pre">ModeFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acoustic_field</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><span class="pre">AcousticField</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.solver.mode_filter.</span></span><span class="sig-name descname"><span class="pre">ModeFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">acoustic_field</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A class that does mode filtering operations on an AcousticField object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>acoustic_field</strong> (<a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField" title="safe_vamd.solver.acoustic_field.AcousticField"><em>AcousticField</em></a>) – An AcousticField object whose modes are going to be filtered</p>
+<dd class="field-odd"><p><strong>acoustic_field</strong> (<em>AcousticField</em>) – An AcousticField object whose modes are going to be filtered</p>
 </dd>
 </dl>
 <p>Initializes an instance of ModeFilter.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter.sort_by_imag_part">
+<span class="sig-name descname"><span class="pre">sort_by_imag_part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.sort_by_imag_part" title="Link to this definition">¶</a></dt>
+<dd><p>Sorts the modes from least attenuated to most attenuated. In the case of downwind modes, the least attenuated
+mode is the one with the lowest valued imaginary part. For the upwind modes, it is the one with the highest.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>side</strong> (<em>str, optional</em>) – Set of modes used to sort. (side=’downwind’ sorts the downwind modes, side=’upwind’  the upwind modes)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter.filter_by_energy">
 <span class="sig-name descname"><span class="pre">filter_by_energy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">energy_concentration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_energy" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter.filter_by_real_part">
+<span class="sig-name descname"><span class="pre">filter_by_real_part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_real_part" title="Link to this definition">¶</a></dt>
+<dd><p>Filters out the modes whose eigenvalues’ real part are not within a desired interval.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul>
+<li><p><strong>inter</strong> (<em>Sequence[float]</em>) – The admissible interval for the eigenvalue’s real part.</p></li>
+<li><p><strong>side</strong> (<em>str, optional</em>) –</p>
+<dl class="simple">
+<dt>Set of modes to filter from. (side=’downwind’ filters from the downwind modes,</dt><dd><p>side=’upwind’ from the upwind modes)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter.filter_by_imag_part">
-<span class="sig-name descname"><span class="pre">filter_by_imag_part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_imag_part" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">filter_by_imag_part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_imag_part" title="Link to this definition">¶</a></dt>
 <dd><p>Filters out the modes whose eigenvalues’ imaginary part are not within a desired interval.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>inter</strong> (<em>Sequence</em><em>[</em><em>float</em><em>]</em>) – The admissible interval for the eigenvalue’s imaginary part.</p></li>
-<li><p><strong>side</strong> (<em>str</em><em>, </em><em>optional</em>) – Set of modes to filter from. (side=’downwind’ filters from the downwind modes,
+<li><p><strong>inter</strong> (<em>Sequence[float]</em>) – The admissible interval for the eigenvalue’s imaginary part.</p></li>
+<li><p><strong>side</strong> (<em>str, optional</em>) – Set of modes to filter from. (side=’downwind’ filters from the downwind modes,
 side=’upwind’ from the upwind modes)</p></li>
 </ul>
 </dd>
@@ -439,54 +477,18 @@ side=’upwind’ from the upwind modes)</p></li>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter.filter_by_real_part">
-<span class="sig-name descname"><span class="pre">filter_by_real_part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_real_part" title="Link to this definition">¶</a></dt>
-<dd><p>Filters out the modes whose eigenvalues’ real part are not within a desired interval.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inter</strong> (<em>Sequence</em><em>[</em><em>float</em><em>]</em>) – The admissible interval for the eigenvalue’s real part.</p></li>
-<li><p><strong>side</strong> (<em>str</em><em>, </em><em>optional</em>) – <dl class="simple">
-<dt>Set of modes to filter from. (side=’downwind’ filters from the downwind modes,</dt><dd><p>side=’upwind’ from the upwind modes)</p>
-</dd>
-</dl>
-</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter.plot_eigenvalues">
-<span class="sig-name descname"><span class="pre">plot_eigenvalues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upwind_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'black'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upwind_label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'upwind</span> <span class="pre">modes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downwind_color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'red'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downwind_label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind</span> <span class="pre">modes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mk</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.plot_eigenvalues" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">plot_eigenvalues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">upwind_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'black'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upwind_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'upwind</span> <span class="pre">modes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downwind_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'red'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downwind_label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'downwind</span> <span class="pre">modes'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.plot_eigenvalues" title="Link to this definition">¶</a></dt>
 <dd><p>Plots the eigenvalues for the upwind and downwind modes in the real-complex plane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>upwind_color</strong> (<em>str</em><em>, </em><em>optional</em>) – Color for the upwind eigenvalue markers.</p></li>
-<li><p><strong>upwind_label</strong> (<em>str</em><em>, </em><em>optional</em>) – Label for the plotted upwind eigenvalues.</p></li>
-<li><p><strong>downwind_color</strong> (<em>str</em><em>, </em><em>optional</em>) – Color for the downwind eigenvalue markers.</p></li>
-<li><p><strong>downwind_label</strong> (<em>str</em><em>, </em><em>optional</em>) – Label for the plotted downwind eigenvalues.</p></li>
-<li><p><strong>mk</strong> (<em>bool</em><em>, </em><em>optional</em>) – Whether to show the plot (mk=True) or not (mk=False)</p></li>
+<li><p><strong>upwind_color</strong> (<em>str, optional</em>) – Color for the upwind eigenvalue markers.</p></li>
+<li><p><strong>upwind_label</strong> (<em>str, optional</em>) – Label for the plotted upwind eigenvalues.</p></li>
+<li><p><strong>downwind_color</strong> (<em>str, optional</em>) – Color for the downwind eigenvalue markers.</p></li>
+<li><p><strong>downwind_label</strong> (<em>str, optional</em>) – Label for the plotted downwind eigenvalues.</p></li>
+<li><p><strong>mk</strong> (<em>bool, optional</em>) – Whether to show the plot (mk=True) or not (mk=False)</p></li>
 </ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.solver.mode_filter.ModeFilter.sort_by_imag_part">
-<span class="sig-name descname"><span class="pre">sort_by_imag_part</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">side</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'downwind'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.solver.mode_filter.ModeFilter.sort_by_imag_part" title="Link to this definition">¶</a></dt>
-<dd><p>Sorts the modes from least attenuated to most attenuated. In the case of downwind modes, the least attenuated
-mode is the one with the lowest valued imaginary part. For the upwind modes, it is the one with the highest.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>side</strong> (<em>str</em><em>, </em><em>optional</em>) – Set of modes used to sort. (side=’downwind’ sorts the downwind modes, side=’upwind’  the upwind modes)</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>None</p>
@@ -518,11 +520,11 @@ mode is the one with the lowest valued imaginary part. For the upwind modes, it 
 <li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField"><code class="docutils literal notranslate"><span class="pre">AcousticField</span></code></a><ul>
 <li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.downwind_modes"><code class="docutils literal notranslate"><span class="pre">AcousticField.downwind_modes</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.upwind_modes"><code class="docutils literal notranslate"><span class="pre">AcousticField.upwind_modes</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.get_plot_data"><code class="docutils literal notranslate"><span class="pre">AcousticField.get_plot_data()</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.load_modes_from_txt"><code class="docutils literal notranslate"><span class="pre">AcousticField.load_modes_from_txt()</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.save_modes_in_txt"><code class="docutils literal notranslate"><span class="pre">AcousticField.save_modes_in_txt()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.value_2d"><code class="docutils literal notranslate"><span class="pre">AcousticField.value_2d()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.value_2d_with_3d_spread"><code class="docutils literal notranslate"><span class="pre">AcousticField.value_2d_with_3d_spread()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.save_modes_in_txt"><code class="docutils literal notranslate"><span class="pre">AcousticField.save_modes_in_txt()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.load_modes_from_txt"><code class="docutils literal notranslate"><span class="pre">AcousticField.load_modes_from_txt()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.acoustic_field.AcousticField.get_plot_data"><code class="docutils literal notranslate"><span class="pre">AcousticField.get_plot_data()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -539,23 +541,23 @@ mode is the one with the lowest valued imaginary part. For the upwind modes, it 
 <li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.eigvec"><code class="docutils literal notranslate"><span class="pre">Mode.eigvec</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.eigvec_f"><code class="docutils literal notranslate"><span class="pre">Mode.eigvec_f</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.ref_wn"><code class="docutils literal notranslate"><span class="pre">Mode.ref_wn</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.value"><code class="docutils literal notranslate"><span class="pre">Mode.value()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.dvalue"><code class="docutils literal notranslate"><span class="pre">Mode.dvalue()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.value_2d"><code class="docutils literal notranslate"><span class="pre">Mode.value_2d()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.dvalue_x"><code class="docutils literal notranslate"><span class="pre">Mode.dvalue_x()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.dvalue_z"><code class="docutils literal notranslate"><span class="pre">Mode.dvalue_z()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.update_cubicspline_eig"><code class="docutils literal notranslate"><span class="pre">Mode.update_cubicspline_eig()</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.value"><code class="docutils literal notranslate"><span class="pre">Mode.value()</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.mode.Mode.value_2d"><code class="docutils literal notranslate"><span class="pre">Mode.value_2d()</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="#module-safe_vamd.solver.mode_filter">safe_vamd.solver.mode_filter module</a><ul>
 <li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter"><code class="docutils literal notranslate"><span class="pre">ModeFilter</span></code></a><ul>
-<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_energy"><code class="docutils literal notranslate"><span class="pre">ModeFilter.filter_by_energy()</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_imag_part"><code class="docutils literal notranslate"><span class="pre">ModeFilter.filter_by_imag_part()</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_real_part"><code class="docutils literal notranslate"><span class="pre">ModeFilter.filter_by_real_part()</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.plot_eigenvalues"><code class="docutils literal notranslate"><span class="pre">ModeFilter.plot_eigenvalues()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.sort_by_imag_part"><code class="docutils literal notranslate"><span class="pre">ModeFilter.sort_by_imag_part()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_energy"><code class="docutils literal notranslate"><span class="pre">ModeFilter.filter_by_energy()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_real_part"><code class="docutils literal notranslate"><span class="pre">ModeFilter.filter_by_real_part()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.filter_by_imag_part"><code class="docutils literal notranslate"><span class="pre">ModeFilter.filter_by_imag_part()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.solver.mode_filter.ModeFilter.plot_eigenvalues"><code class="docutils literal notranslate"><span class="pre">ModeFilter.plot_eigenvalues()</span></code></a></li>
 </ul>
 </li>
 </ul>

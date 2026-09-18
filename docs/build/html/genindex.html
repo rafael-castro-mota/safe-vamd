@@ -69,7 +69,7 @@
       <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation.acoustic_field">acoustic_field (safe_vamd.safe_computation.SAFEComputation attribute)</a>
 
       <ul>
-        <li><a href="vamd.html#safe_vamd.vamd.VAMD.acoustic_field">(safe_vamd.vamd.VAMD attribute)</a>
+        <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.acoustic_field">(safe_vamd.vamdecomp.VAMDecomp attribute)</a>
 </li>
       </ul></li>
       <li><a href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField">AcousticField (class in safe_vamd.solver.acoustic_field)</a>
@@ -142,19 +142,19 @@
         <li><a href="safe_vamd.mesh.html#safe_vamd.mesh.kirby_c.KirbyC.c">(safe_vamd.mesh.kirby_c.KirbyC attribute)</a>
 </li>
       </ul></li>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.calculate_amp_factors">calculate_amp_factors() (safe_vamd.vamd.VAMD method)</a>
-</li>
       <li><a href="safe_vamd.mesh.html#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.calculate_length">calculate_length() (safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange method)</a>
 </li>
       <li><a href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.polynomial_func.PolyFunc.coeffs">coeffs (safe_vamd.mathematical_functions.polynomial_func.PolyFunc attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.composite_func.CompositeFunc">CompositeFunc (class in safe_vamd.mathematical_functions.composite_func)</a>
 </li>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.compute_matrix_m">compute_matrix_m() (safe_vamd.vamd.VAMD method)</a>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.compute_conv_factors">compute_conv_factors() (safe_vamd.vamdecomp.VAMDecomp method)</a>
 </li>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.compute_pseudo_m">compute_pseudo_m() (safe_vamd.vamd.VAMD method)</a>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.compute_matrix_m">compute_matrix_m() (safe_vamd.vamdecomp.VAMDecomp method)</a>
+</li>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.compute_pseudo_m">compute_pseudo_m() (safe_vamd.vamdecomp.VAMDecomp method)</a>
 </li>
       <li><a href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.constant_func.ConstFunc">ConstFunc (class in safe_vamd.mathematical_functions.constant_func)</a>
 </li>
@@ -381,12 +381,12 @@
       <li><a href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField.load_modes_from_txt">load_modes_from_txt() (safe_vamd.solver.acoustic_field.AcousticField method)</a>
 
       <ul>
-        <li><a href="vamd.html#safe_vamd.vamd.VAMD.load_modes_from_txt">(safe_vamd.vamd.VAMD method)</a>
+        <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.load_modes_from_txt">(safe_vamd.vamdecomp.VAMDecomp method)</a>
 </li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.load_samples_from_txt">load_samples_from_txt() (safe_vamd.vamd.VAMD method)</a>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.load_samples_from_txt">load_samples_from_txt() (safe_vamd.vamdecomp.VAMDecomp method)</a>
 </li>
       <li><a href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.logarithmic_func.LogFunc">LogFunc (class in safe_vamd.mathematical_functions.logarithmic_func)</a>
 </li>
@@ -398,7 +398,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="safe_vamd.dimensionless_quantities.html#safe_vamd.dimensionless_quantities.mach_number.MachNumber">MachNumber (class in safe_vamd.dimensionless_quantities.mach_number)</a>
 </li>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.match_modes_to_samples">match_modes_to_samples() (safe_vamd.vamd.VAMD method)</a>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.match_modes_to_samples">match_modes_to_samples() (safe_vamd.vamdecomp.VAMDecomp method)</a>
 </li>
       <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation.match_to_monopole">match_to_monopole() (safe_vamd.safe_computation.SAFEComputation method)</a>
 </li>
@@ -410,7 +410,7 @@
 </li>
       <li><a href="safe_vamd.solver.html#safe_vamd.solver.mode.Mode">Mode (class in safe_vamd.solver.mode)</a>
 </li>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.mode_filter">mode_filter (safe_vamd.vamd.VAMD attribute)</a>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.mode_filter">mode_filter (safe_vamd.vamdecomp.VAMDecomp attribute)</a>
 </li>
       <li><a href="safe_vamd.solver.html#safe_vamd.solver.mode_filter.ModeFilter">ModeFilter (class in safe_vamd.solver.mode_filter)</a>
 </li>
@@ -490,8 +490,6 @@
 </li>
         <li><a href="safe_vamd.mesh.html#module-safe_vamd.mesh.quadratic_basis_function">safe_vamd.mesh.quadratic_basis_function</a>
 </li>
-        <li><a href="safecomputation.html#module-safe_vamd.safe_computation">safe_vamd.safe_computation</a>
-</li>
         <li><a href="safe_vamd.solver.html#module-safe_vamd.solver">safe_vamd.solver</a>
 </li>
         <li><a href="safe_vamd.solver.html#module-safe_vamd.solver.acoustic_field">safe_vamd.solver.acoustic_field</a>
@@ -514,7 +512,7 @@
 </li>
         <li><a href="safe_vamd.stratified_atmosphere.html#module-safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere">safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere</a>
 </li>
-        <li><a href="vamd.html#module-safe_vamd.vamd">safe_vamd.vamd</a>
+        <li><a href="vamd.html#module-safe_vamd.vamdecomp">safe_vamd.vamdecomp</a>
 </li>
       </ul></li>
   </ul></td>
@@ -792,6 +790,8 @@
         <li><a href="safe_vamd.mathematical_functions.html#module-safe_vamd.mathematical_functions.subtraction_func">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     safe_vamd.mathematical_functions.summation_func
 
@@ -799,8 +799,6 @@
         <li><a href="safe_vamd.mathematical_functions.html#module-safe_vamd.mathematical_functions.summation_func">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     safe_vamd.mesh
 
@@ -855,13 +853,6 @@
 
       <ul>
         <li><a href="safe_vamd.mesh.html#module-safe_vamd.mesh.quadratic_basis_function">module</a>
-</li>
-      </ul></li>
-      <li>
-    safe_vamd.safe_computation
-
-      <ul>
-        <li><a href="safecomputation.html#module-safe_vamd.safe_computation">module</a>
 </li>
       </ul></li>
       <li>
@@ -942,10 +933,10 @@
 </li>
       </ul></li>
       <li>
-    safe_vamd.vamd
+    safe_vamd.vamdecomp
 
       <ul>
-        <li><a href="vamd.html#module-safe_vamd.vamd">module</a>
+        <li><a href="vamd.html#module-safe_vamd.vamdecomp">module</a>
 </li>
       </ul></li>
       <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation">SAFEComputation (class in safe_vamd.safe_computation)</a>
@@ -955,13 +946,9 @@
       <ul>
         <li><a href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField.save_modes_in_txt">(safe_vamd.solver.acoustic_field.AcousticField method)</a>
 </li>
-        <li><a href="vamd.html#safe_vamd.vamd.VAMD.save_modes_in_txt">(safe_vamd.vamd.VAMD method)</a>
+        <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.save_modes_in_txt">(safe_vamd.vamdecomp.VAMDecomp method)</a>
 </li>
       </ul></li>
-      <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation.set_alpha">set_alpha() (safe_vamd.safe_computation.SAFEComputation method)</a>
-</li>
-      <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation.set_ground_impedance">set_ground_impedance() (safe_vamd.safe_computation.SAFEComputation method)</a>
-</li>
       <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation.setup">setup() (safe_vamd.safe_computation.SAFEComputation method)</a>
 </li>
       <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation.solve">solve() (safe_vamd.safe_computation.SAFEComputation method)</a>
@@ -1003,8 +990,6 @@
       <li><a href="safe_vamd.mesh.html#safe_vamd.mesh.kirby_abs.KirbyABS.tau1">tau1 (safe_vamd.mesh.kirby_abs.KirbyABS attribute)</a>
 </li>
       <li><a href="safe_vamd.mesh.html#safe_vamd.mesh.kirby_abs.KirbyABS.tau2">tau2 (safe_vamd.mesh.kirby_abs.KirbyABS attribute)</a>
-</li>
-      <li><a href="safecomputation.html#safe_vamd.safe_computation.SAFEComputation.toggle_air_absorv">toggle_air_absorv() (safe_vamd.safe_computation.SAFEComputation method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1086,7 +1071,7 @@
       </ul></li>
       <li><a href="safe_vamd.solver.html#safe_vamd.solver.acoustic_field.AcousticField.value_2d_with_3d_spread">value_2d_with_3d_spread() (safe_vamd.solver.acoustic_field.AcousticField method)</a>
 </li>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD">VAMD (class in safe_vamd.vamd)</a>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp">VAMDecomp (class in safe_vamd.vamdecomp)</a>
 </li>
       <li><a href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.background_field.BackgroundField.vx">vx (safe_vamd.background_atmospheric_field.background_field.BackgroundField attribute)</a>
 </li>
@@ -1122,7 +1107,7 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.x_samples">x_samples (safe_vamd.vamd.VAMD attribute)</a>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.x_samples">x_samples (safe_vamd.vamdecomp.VAMDecomp attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1152,7 +1137,7 @@
         <li><a href="safe_vamd.mesh.html#safe_vamd.mesh.kirby_abs.KirbyABS.z_ref">(safe_vamd.mesh.kirby_abs.KirbyABS attribute)</a>
 </li>
       </ul></li>
-      <li><a href="vamd.html#safe_vamd.vamd.VAMD.z_samples">z_samples (safe_vamd.vamd.VAMD attribute)</a>
+      <li><a href="vamd.html#safe_vamd.vamdecomp.VAMDecomp.z_samples">z_samples (safe_vamd.vamdecomp.VAMDecomp attribute)</a>
 </li>
   </ul></td>
 </tr></table>

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Example 1 &#8212; SAFE-VAMD  documentation</title>
+    <title>Example 1 - Infrasound propagation in a large-scale atmosphere &#8212; SAFE-VAMD  documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
     <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=34905f61" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
@@ -14,7 +14,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SAFE-VAMD" href="modules.html" />
+    <link rel="next" title="Example 2 - Experimental outdoor reconstruction" href="example_2.html" />
     <link rel="prev" title="SAFE-VAMD" href="index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="Related">
@@ -27,13 +27,13 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="SAFE-VAMD"
+          <a href="example_2.html" title="Example 2 - Experimental outdoor reconstruction"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="SAFE-VAMD"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Example 1</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Example 1 - Infrasound propagation in a large-scale atmosphere</a></li> 
       </ul>
     </div>  
 
@@ -42,8 +42,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="example-1">
-<h1>Example 1<a class="headerlink" href="#example-1" title="Link to this heading">¶</a></h1>
+  <section id="example-1-infrasound-propagation-in-a-large-scale-atmosphere">
+<h1>Example 1 - Infrasound propagation in a large-scale atmosphere<a class="headerlink" href="#example-1-infrasound-propagation-in-a-large-scale-atmosphere" title="Link to this heading">¶</a></h1>
 <p>The large-scale, low-frequency sound propagation in <a class="reference external" href="https://doi.org/10.1121/10.0003567">https://doi.org/10.1121/10.0003567</a> (Figure 11),
 <a class="reference external" href="http://dx.doi.org/10.1121/1.4976067">http://dx.doi.org/10.1121/1.4976067</a> (Figure 7) and <a class="reference external" href="https://doi.org/10.1016/j.enganabound.2025.106308">https://doi.org/10.1016/j.enganabound.2025.106308</a> (Figure 4) is
 solved with the package. The problem is of particular interest because of the complex atmospheric conditions and the
@@ -58,8 +58,8 @@ the results are detailed in Section 3.1 of the same article.</p>
 </pre></div>
 </div>
 <p>The setup of the computation can be run with:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">input_file</span> <span class="o">=</span> <span class="s2">&quot;example_1_atmo_cond.txt&quot;</span>
-<span class="n">safe_comp</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">rho_at_ground</span><span class="o">=</span><span class="mf">1.235</span><span class="p">,</span> <span class="n">g_value</span><span class="o">=</span><span class="mf">9.81</span><span class="p">,</span> <span class="n">pml_thick_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">input_file</span> <span class="o">=</span> <span class="s1">&#39;example_1_atmo_cond.txt&#39;</span>
+<span class="n">safe_comp</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">rho_at_ground</span><span class="o">=</span><span class="mf">1.23</span><span class="p">,</span> <span class="n">g_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">pml_thick_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The <em>.txt</em> file with the background atmospheric conditions is given in the example folder under the name “example_1_atmo_cond.txt”.
@@ -79,8 +79,8 @@ The user can double check if the modes have been correctly separated into downwi
 </pre></div>
 </div>
 </section>
-<section id="matching-the-va-modes-to-the-acosutic-pressure-samples">
-<h2>Matching the VA modes to the acosutic pressure samples.<a class="headerlink" href="#matching-the-va-modes-to-the-acosutic-pressure-samples" title="Link to this heading">¶</a></h2>
+<section id="matching-the-va-modes-to-the-acoustic-pressure-samples">
+<h2>Matching the VA modes to the acoustic pressure samples.<a class="headerlink" href="#matching-the-va-modes-to-the-acoustic-pressure-samples" title="Link to this heading">¶</a></h2>
 <p>Vertical Atmospheric Mode Decomposition can be applied with the methods in the <em>VAMD</em> class:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>   <span class="kn">from</span><span class="w"> </span><span class="nn">safe_vamd.vamd</span><span class="w"> </span><span class="kn">import</span> <span class="n">VAMD</span>
    <span class="n">vamd</span> <span class="o">=</span> <span class="n">VAMD</span><span class="p">()</span>
@@ -114,7 +114,7 @@ The user can double check if the modes have been correctly separated into downwi
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vamd</span><span class="o">.</span><span class="n">load_samples_from_txt</span><span class="p">(</span><span class="s2">&quot;./samples/samples_x=7p5km+10km.txt&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>the <em>.txt</em> files with the acoustic pressure samples has the following format:</p>
+<p>The <em>.txt</em> files with the acoustic pressure samples has the following format:</p>
 <img alt="_images/example_1_samples.png" src="_images/example_1_samples.png" />
 <p>The samples can be matched to the samples with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">acoustic_field</span> <span class="o">=</span> <span class="n">vamd</span><span class="o">.</span><span class="n">match_modes_to_samples</span><span class="p">(</span><span class="n">spread_3d</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -138,9 +138,9 @@ The generated contour plot for the normalized acoustic pressure is presented her
   <div>
     <h3><a href="index.html">Table of Contents</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Example 1</a><ul>
+<li><a class="reference internal" href="#">Example 1 - Infrasound propagation in a large-scale atmosphere</a><ul>
 <li><a class="reference internal" href="#computing-the-vertical-atmospheric-va-modes">Computing the Vertical Atmospheric (VA) Modes</a></li>
-<li><a class="reference internal" href="#matching-the-va-modes-to-the-acosutic-pressure-samples">Matching the VA modes to the acosutic pressure samples.</a></li>
+<li><a class="reference internal" href="#matching-the-va-modes-to-the-acoustic-pressure-samples">Matching the VA modes to the acoustic pressure samples.</a></li>
 </ul>
 </li>
 </ul>
@@ -153,8 +153,8 @@ The generated contour plot for the normalized acoustic pressure is presented her
   </div>
   <div>
     <h4>Next topic</h4>
-    <p class="topless"><a href="modules.html"
-                          title="next chapter">SAFE-VAMD</a></p>
+    <p class="topless"><a href="example_2.html"
+                          title="next chapter">Example 2 - Experimental outdoor reconstruction</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -187,13 +187,13 @@ The generated contour plot for the normalized acoustic pressure is presented her
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="SAFE-VAMD"
+          <a href="example_2.html" title="Example 2 - Experimental outdoor reconstruction"
              >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="SAFE-VAMD"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">SAFE-VAMD  documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Example 1</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Example 1 - Infrasound propagation in a large-scale atmosphere</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

@@ -41,6 +41,7 @@ Examples
    :caption: Contents:
 
    example_1
+   example_2
 
 The Module
 =================

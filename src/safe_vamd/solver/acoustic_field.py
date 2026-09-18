@@ -139,11 +139,11 @@ class AcousticField:
         """
 
         data = np.loadtxt(mode_path, dtype=complex)
+        print("shape_of_sata", np.shape(data))
         n_modes = len(data[0, :])-1
         heights = np.real(data[0:-3, 0]).ravel()
-
         modes = []
-        for i in range(1, n_modes):
+        for i in range(1, n_modes+1):
             eigvec = data[0:-3, i].ravel()
             ref_wn = data[-3, i]
             eigval = data[-2, i]

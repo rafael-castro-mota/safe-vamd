@@ -275,10 +275,6 @@ def kirby_solver_lagrange(mesh: Mesh1D, background_field: BackgroundField, sourc
     if boundary_condition is not None:
         boundary_condition.apply_bc(a, b, c, d)
 
-    #np.save("example_2_matrix_a", a)
-    #np.save("example_2_matrix_b", b)
-    #np.save("example_2_matrix_c", c)
-    #np.save("example_2_matrix_d", d)
 
     time1 = perf_counter()
     print("Matrix assembly took:", time1 - time0, 's')
@@ -292,8 +288,8 @@ def kirby_solver_lagrange(mesh: Mesh1D, background_field: BackgroundField, sourc
     time4 = perf_counter()
 
     # Filtering out spurious modes (high real part)
-    abs_imag_values = np.abs(np.real(vals))
-    cond = abs_imag_values > 2
+    abs_real_values = np.abs(np.real(vals))
+    cond = abs_real_values > 4
     indexes = np.argwhere(cond).ravel()
     vals = np.delete(vals, indexes)
     vecs = np.delete(vecs, indexes, axis=1)

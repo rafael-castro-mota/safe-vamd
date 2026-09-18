@@ -49,7 +49,7 @@
 <span id="safe-vamd-stratified-atmosphere-density-stratified-atmosphere-module"></span><h2>safe_vamd.stratified_atmosphere.density_stratified_atmosphere module<a class="headerlink" href="#module-safe_vamd.stratified_atmosphere.density_stratified_atmosphere" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.stratified_atmosphere.density_stratified_atmosphere.</span></span><span class="sig-name descname"><span class="pre">RhoStratAtmo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.air_properties.AirProperties" title="safe_vamd.background_atmospheric_field.air_properties.AirProperties"><span class="pre">AirProperties</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.stratified_atmosphere.density_stratified_atmosphere.</span></span><span class="sig-name descname"><span class="pre">RhoStratAtmo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
 <p>A class that computes the density in hydrostatic equilibrium with the acceleration of gravity and the
 temperature profile and implements it as a subclass of MathFunc:</p>
@@ -110,25 +110,8 @@ temperature profile and implements it as a subclass of MathFunc:</p>
 
 <p>Initializes an instance of RhoStratAtmo</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.dvalue">
-<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.dvalue" title="Link to this definition">¶</a></dt>
-<dd><p>Computes the derivative with respect to height of air density using hydrostatic relations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – The height(s) (in meters) at which the derivative should be computed.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The derivative with respect to height of air density at z(s).</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.value">
-<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.value" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.value" title="Link to this definition">¶</a></dt>
 <dd><p>Computes the value of air density with hydrostatic relations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -143,6 +126,23 @@ temperature profile and implements it as a subclass of MathFunc:</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the derivative with respect to height of air density using hydrostatic relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – The height(s) (in meters) at which the derivative should be computed.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The derivative with respect to height of air density at z(s).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -150,7 +150,7 @@ temperature profile and implements it as a subclass of MathFunc:</p>
 <span id="safe-vamd-stratified-atmosphere-pressure-stratified-atmosphere-module"></span><h2>safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere module<a class="headerlink" href="#module-safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.</span></span><span class="sig-name descname"><span class="pre">PStratAtmo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_properties</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.background_atmospheric_field.html#safe_vamd.background_atmospheric_field.air_properties.AirProperties" title="safe_vamd.background_atmospheric_field.air_properties.AirProperties"><span class="pre">AirProperties</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.</span></span><span class="sig-name descname"><span class="pre">PStratAtmo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">air_properties</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
 <p>A class that computes the air pressure in hydrostatic equilibrium with the air density pressure
 temperature profiles and implements it as a subclass of MathFunc:</p>
@@ -189,15 +189,15 @@ temperature profiles and implements it as a subclass of MathFunc:</p>
 
 <p>Initializes an instance of the PStratAtmo class.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.dvalue">
-<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.dvalue" title="Link to this definition">¶</a></dt>
-<dd><p>Computes the derivative with respect to height of the air pressure using the perfect gas law.</p>
+<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.value" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the value of air pressure with the perfect gas law.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) – The height at which the value of the derivative with respect to height should be computed.</p>
+<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) – The height at which the value of the air pressure should be computed.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The value of the derivative with respect to height at the desired height (z).</p>
+<dd class="field-even"><p>The value of air pressure at the desired height (z).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -206,15 +206,15 @@ temperature profiles and implements it as a subclass of MathFunc:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.value">
-<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.value" title="Link to this definition">¶</a></dt>
-<dd><p>Computes the value of air pressure with the perfect gas law.</p>
+<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the derivative with respect to height of the air pressure using the perfect gas law.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) – The height at which the value of the air pressure should be computed.</p>
+<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) – The height at which the value of the derivative with respect to height should be computed.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The value of air pressure at the desired height (z).</p>
+<dd class="field-even"><p>The value of the derivative with respect to height at the desired height (z).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -256,19 +256,15 @@ temperature profiles and implements it as a subclass of MathFunc:</p>
 
 <p>Initializes an instance of the CStratAtmo class.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.dvalue">
-<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.dvalue" title="Link to this definition">¶</a></dt>
-<dd><p>Computes the derivative with respect to height of the speed of sound.</p>
+<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.value" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the value of teh speed of sound.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) – <dl class="simple">
-<dt>The height (in meters) at which the derivative with respect to height of the speed of sound should be</dt><dd><p>computed.</p>
-</dd>
-</dl>
-</p>
+<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) – The height (in meters) at which the value of the speed of sound should be computed.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The value of the derivative with respect to height of the speed of sound at the desired height (z).</p>
+<dd class="field-even"><p>The value of the speed of sound at the desired height (z).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -277,15 +273,19 @@ temperature profiles and implements it as a subclass of MathFunc:</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.value">
-<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.value" title="Link to this definition">¶</a></dt>
-<dd><p>Computes the value of teh speed of sound.</p>
-<dl class="field-list simple">
+<dt class="sig sig-object py" id="safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the derivative with respect to height of the speed of sound.</p>
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) – The height (in meters) at which the value of the speed of sound should be computed.</p>
+<dd class="field-odd"><p><strong>z</strong> (<em>float</em>) –</p>
+<dl class="simple">
+<dt>The height (in meters) at which the derivative with respect to height of the speed of sound should be</dt><dd><p>computed.</p>
+</dd>
+</dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>The value of the speed of sound at the desired height (z).</p>
+<dd class="field-even"><p>The value of the derivative with respect to height of the speed of sound at the desired height (z).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>float</p>
@@ -320,8 +320,8 @@ temperature profiles and implements it as a subclass of MathFunc:</p>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.rho0"><code class="docutils literal notranslate"><span class="pre">RhoStratAtmo.rho0</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.t"><code class="docutils literal notranslate"><span class="pre">RhoStratAtmo.t</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.air_properties"><code class="docutils literal notranslate"><span class="pre">RhoStratAtmo.air_properties</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.dvalue"><code class="docutils literal notranslate"><span class="pre">RhoStratAtmo.dvalue()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.value"><code class="docutils literal notranslate"><span class="pre">RhoStratAtmo.value()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.density_stratified_atmosphere.RhoStratAtmo.dvalue"><code class="docutils literal notranslate"><span class="pre">RhoStratAtmo.dvalue()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -331,8 +331,8 @@ temperature profiles and implements it as a subclass of MathFunc:</p>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.rho"><code class="docutils literal notranslate"><span class="pre">PStratAtmo.rho</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.t"><code class="docutils literal notranslate"><span class="pre">PStratAtmo.t</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.air_properties"><code class="docutils literal notranslate"><span class="pre">PStratAtmo.air_properties</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.dvalue"><code class="docutils literal notranslate"><span class="pre">PStratAtmo.dvalue()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.value"><code class="docutils literal notranslate"><span class="pre">PStratAtmo.value()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.pressure_stratified_atmosphere.PStratAtmo.dvalue"><code class="docutils literal notranslate"><span class="pre">PStratAtmo.dvalue()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -341,8 +341,8 @@ temperature profiles and implements it as a subclass of MathFunc:</p>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo"><code class="docutils literal notranslate"><span class="pre">CStratAtmo</span></code></a><ul>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.t"><code class="docutils literal notranslate"><span class="pre">CStratAtmo.t</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.air_properties"><code class="docutils literal notranslate"><span class="pre">CStratAtmo.air_properties</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.dvalue"><code class="docutils literal notranslate"><span class="pre">CStratAtmo.dvalue()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.value"><code class="docutils literal notranslate"><span class="pre">CStratAtmo.value()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.stratified_atmosphere.speed_of_sound_stratified_atmosphere.CStratAtmo.dvalue"><code class="docutils literal notranslate"><span class="pre">CStratAtmo.dvalue()</span></code></a></li>
 </ul>
 </li>
 </ul>

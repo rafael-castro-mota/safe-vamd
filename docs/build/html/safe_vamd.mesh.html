@@ -53,7 +53,7 @@
 <span id="safe-vamd-mesh-element-1d-arbitrary-order-lagrange-module"></span><h2>safe_vamd.mesh.element_1d_arbitrary_order_lagrange module<a class="headerlink" href="#module-safe_vamd.mesh.element_1d_arbitrary_order_lagrange" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.element_1d_arbitrary_order_lagrange.</span></span><span class="sig-name descname"><span class="pre">Element1DArbitraryOrderLagrange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#safe_vamd.mesh.node.Node" title="safe_vamd.mesh.node.Node"><span class="pre">Node</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.element_1d_arbitrary_order_lagrange.</span></span><span class="sig-name descname"><span class="pre">Element1DArbitraryOrderLagrange</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A finite-element with piece-wise Lagrange polynomials of arbitrary order.</p>
 <dl class="py attribute">
@@ -124,22 +124,8 @@
 
 <p>initializes an instance of Element1DArbitraryOrderLagrange</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.calculate_length">
-<span class="sig-name descname"><span class="pre">calculate_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.calculate_length" title="Link to this definition">¶</a></dt>
-<dd><p>Computes the length of the finite-element (in meters).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>The length of the finite-element (in meters).</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_bf">
-<span class="sig-name descname"><span class="pre">create_bf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_bf" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_bf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_bf" title="Link to this definition">¶</a></dt>
 <dd><p>Creates a list with the finite-element’s piece-wise Lagrange polynomials (each entry is a MathFunc).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -153,7 +139,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_dbf">
-<span class="sig-name descname"><span class="pre">create_dbf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_dbf" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_dbf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_dbf" title="Link to this definition">¶</a></dt>
 <dd><p>Creates a list with the derivatives for the finite-element’s piece-wise Lagrange polynomials
 (each entry is a MathFunc).</p>
 <dl class="field-list simple">
@@ -166,6 +152,20 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.calculate_length">
+<span class="sig-name descname"><span class="pre">calculate_length</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.calculate_length" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the length of the finite-element (in meters).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The length of the finite-element (in meters).</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -173,7 +173,7 @@
 <span id="safe-vamd-mesh-element-1d-arbitrary-order-lagrange-pml-module"></span><h2>safe_vamd.mesh.element_1d_arbitrary_order_lagrange_pml module<a class="headerlink" href="#module-safe_vamd.mesh.element_1d_arbitrary_order_lagrange_pml" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.mesh.element_1d_arbitrary_order_lagrange_pml.Element1DArbitraryOrderLagrangePML">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.element_1d_arbitrary_order_lagrange_pml.</span></span><span class="sig-name descname"><span class="pre">Element1DArbitraryOrderLagrangePML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#safe_vamd.mesh.node.Node" title="safe_vamd.mesh.node.Node"><span class="pre">Node</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pml_thickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange_pml.Element1DArbitraryOrderLagrangePML" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.element_1d_arbitrary_order_lagrange_pml.</span></span><span class="sig-name descname"><span class="pre">Element1DArbitraryOrderLagrangePML</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pml_thickness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange_pml.Element1DArbitraryOrderLagrangePML" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange" title="safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange"><code class="xref py py-class docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange</span></code></a></p>
 <p>One-dimensional arbitrary-order Lagrange finite element in a Perfectly Matched Layer (PML).</p>
 <p>This class extends <code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange</span></code> by incorporating a stretching function “pml”
@@ -204,16 +204,16 @@
 <p>The attributes <code class="docutils literal notranslate"><span class="pre">eid</span></code>, <code class="docutils literal notranslate"><span class="pre">nodes</span></code>, and <code class="docutils literal notranslate"><span class="pre">degree</span></code> are inherited from
 <code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange</span></code>.</p>
 <p>Initializes an instance of <code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrangePML</span></code>.</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
+<dd class="field-odd"><ul>
 <li><p><strong>pml_thickness</strong> (<em>float</em>) – The thickness (in meters) of the Perfectly Matched Layer.</p></li>
 <li><p><strong>tau1</strong> (<em>float</em>) – A factor for the stretching function.</p></li>
-<li><p><strong>tau2</strong> (<em>float</em>) – <p>A factor for the stretching function.</p>
+<li><p><strong>tau2</strong> (<em>float</em>) –    A factor for the stretching function.</p>
 <p>Notes</p>
-</p></li>
-<li><p><strong>-----</strong></p></li>
-<li><p><strong>https</strong> (<em>The factors tau1 and tau2 are given the value</em><em> of </em><em>4 in</em>)</p></li>
+</li>
+<li><p><strong>—–</strong></p></li>
+<li><p><strong>The factors tau1 and tau2 are given the value of 4 in https</strong> (<em>//doi.org/10.1121/10.0002912.</em>)</p></li>
 </ul>
 </dd>
 </dl>
@@ -224,7 +224,7 @@
 <span id="safe-vamd-mesh-kirby-abs-module"></span><h2>safe_vamd.mesh.kirby_abs module<a class="headerlink" href="#module-safe_vamd.mesh.kirby_abs" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.mesh.kirby_abs.KirbyABS">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.kirby_abs.</span></span><span class="sig-name descname"><span class="pre">KirbyABS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_ref</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pml_thickness</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_abs.KirbyABS" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.kirby_abs.</span></span><span class="sig-name descname"><span class="pre">KirbyABS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z_ref</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pml_thickness</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_abs.KirbyABS" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
 <p>Stretching function for the Perfectly Matched Layer (PML), implemented as a subclass of MathFunc.</p>
 <dl class="py attribute">
@@ -286,14 +286,8 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.mesh.kirby_abs.KirbyABS.dvalue">
-<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.mesh.kirby_abs.KirbyABS.dvalue" title="Link to this definition">¶</a></dt>
-<dd><p>No derivative is actually implemented. Only done to respect parent’s class abstract method.</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.mesh.kirby_abs.KirbyABS.value">
-<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.mesh.kirby_abs.KirbyABS.value" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_abs.KirbyABS.value" title="Link to this definition">¶</a></dt>
 <dd><p>Evaluates the stretching function at.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -308,6 +302,12 @@
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.mesh.kirby_abs.KirbyABS.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_abs.KirbyABS.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>No derivative is actually implemented. Only done to respect parent’s class abstract method.</p>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -315,7 +315,7 @@
 <span id="safe-vamd-mesh-kirby-c-module"></span><h2>safe_vamd.mesh.kirby_c module<a class="headerlink" href="#module-safe_vamd.mesh.kirby_c" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.mesh.kirby_c.KirbyC">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.kirby_c.</span></span><span class="sig-name descname"><span class="pre">KirbyC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><span class="pre">MathFunc</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_c.KirbyC" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.kirby_c.</span></span><span class="sig-name descname"><span class="pre">KirbyC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_c.KirbyC" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
 <p>Function for the speed of sound with an added imaginary term for absorption in the Perfectly Matched Layer,
 implemented as a subclass of MathFunc.</p>
@@ -346,7 +346,7 @@ implemented as a subclass of MathFunc.</p>
 <p>Initializes an instance of class KirbyC.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>c</strong> (<a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><em>MathFunc</em></a>) – Function for the speed of sound, implemented as a subclass of MathFunc.</p>
+<dd class="field-odd"><p><strong>c</strong> (<em>MathFunc</em>) – Function for the speed of sound, implemented as a subclass of MathFunc.</p>
 </dd>
 </dl>
 <dl class="simple">
@@ -354,8 +354,25 @@ implemented as a subclass of MathFunc.</p>
 </dd>
 </dl>
 <dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.mesh.kirby_c.KirbyC.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_c.KirbyC.value" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates of the stretching function at z(s).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – z-coordinate(s) (height, in meters). Needs to be convertible to a numpy array.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Value(s) of the speed of sound with the added imaginary absorption term at z(s).</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.mesh.kirby_c.KirbyC.dvalue">
-<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.mesh.kirby_c.KirbyC.dvalue" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.kirby_c.KirbyC.dvalue" title="Link to this definition">¶</a></dt>
 <dd><p>Evaluates the derivative with respect to height of the stretching function at z(s).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -371,23 +388,6 @@ term at z(s).</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.mesh.kirby_c.KirbyC.value">
-<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.mesh.kirby_c.KirbyC.value" title="Link to this definition">¶</a></dt>
-<dd><p>Evaluates of the stretching function at z(s).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>z</strong> (<em>ArrayLike</em>) – z-coordinate(s) (height, in meters). Needs to be convertible to a numpy array.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Value(s) of the speed of sound with the added imaginary absorption term at z(s).</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>np.ndarray</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </section>
@@ -395,7 +395,7 @@ term at z(s).</p>
 <span id="safe-vamd-mesh-mesh-1d-module"></span><h2>safe_vamd.mesh.mesh_1d module<a class="headerlink" href="#module-safe_vamd.mesh.mesh_1d" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.mesh.mesh_1d.Mesh1D">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.mesh_1d.</span></span><span class="sig-name descname"><span class="pre">Mesh1D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange" title="safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange"><span class="pre">Element1DArbitraryOrderLagrange</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#safe_vamd.mesh.node.Node" title="safe_vamd.mesh.node.Node"><span class="pre">Node</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.mesh_1d.Mesh1D" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.mesh_1d.</span></span><span class="sig-name descname"><span class="pre">Mesh1D</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.mesh_1d.Mesh1D" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A one-dimensional computational mesh, comprised of finite-elements and nodes.</p>
 <dl class="py attribute">
@@ -422,8 +422,27 @@ term at z(s).</p>
 
 <p>Initializes an instance of class Mesh1D.</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="safe_vamd.mesh.mesh_1d.Mesh1D.load_from_element_bounds">
+<span class="sig-name descname"><span class="pre">load_from_element_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_bounds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.mesh_1d.Mesh1D.load_from_element_bounds" title="Link to this definition">¶</a></dt>
+<dd><p>Takes a list of interface heights for the desired finite-elements,
+places the appropriate interior nodes (instances of Node), creates the mesh nodes (instance of Node) and
+finite-elements (instances of Element1DArbitraryOrderLagrange) and associates them with the mesh object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>element_bounds</strong> (<em>Sequence[float]</em>) – An ordered (ascending) list of floats representing the bounds of the elements.</p></li>
+<li><p><strong>degree</strong> (<em>int</em>) – The degree of the piece-wise Lagrange polynomials in the finite-elements.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="safe_vamd.mesh.mesh_1d.Mesh1D.add_top_pml">
-<span class="sig-name descname"><span class="pre">add_top_pml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thick</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_elements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.mesh.mesh_1d.Mesh1D.add_top_pml" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_top_pml</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thick</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_elements</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.mesh_1d.Mesh1D.add_top_pml" title="Link to this definition">¶</a></dt>
 <dd><p>Adds a Perfectly Matched Layer (PML) of a certain thickness and number of arbitrary-order Lagrange piece-wise
 finite-elements to the top of the computational domain.</p>
 <dl class="field-list simple">
@@ -442,25 +461,6 @@ finite-elements to the top of the computational domain.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.mesh.mesh_1d.Mesh1D.load_from_element_bounds">
-<span class="sig-name descname"><span class="pre">load_from_element_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element_bounds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">degree</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#safe_vamd.mesh.mesh_1d.Mesh1D.load_from_element_bounds" title="Link to this definition">¶</a></dt>
-<dd><p>Takes a list of interface heights for the desired finite-elements,
-places the appropriate interior nodes (instances of Node), creates the mesh nodes (instance of Node) and
-finite-elements (instances of Element1DArbitraryOrderLagrange) and associates them with the mesh object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>element_bounds</strong> (<em>Sequence</em><em>[</em><em>float</em><em>]</em>) – An ordered (ascending) list of floats representing the bounds of the elements.</p></li>
-<li><p><strong>degree</strong> (<em>int</em>) – The degree of the piece-wise Lagrange polynomials in the finite-elements.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>None</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </section>
@@ -468,7 +468,7 @@ finite-elements (instances of Element1DArbitraryOrderLagrange) and associates th
 <span id="safe-vamd-mesh-node-module"></span><h2>safe_vamd.mesh.node module<a class="headerlink" href="#module-safe_vamd.mesh.node" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.mesh.node.Node">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.node.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.node.Node" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.node.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.node.Node" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>A node in a computational mesh.</p>
 <dl class="py attribute">
@@ -523,7 +523,7 @@ finite-elements (instances of Element1DArbitraryOrderLagrange) and associates th
 <span id="safe-vamd-mesh-quadratic-basis-function-module"></span><h2>safe_vamd.mesh.quadratic_basis_function module<a class="headerlink" href="#module-safe_vamd.mesh.quadratic_basis_function" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.quadratic_basis_function.</span></span><span class="sig-name descname"><span class="pre">QuadBasisFunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bfid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_coords</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">safe_vamd.mesh.quadratic_basis_function.</span></span><span class="sig-name descname"><span class="pre">QuadBasisFunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bfid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">node_coords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="safe_vamd.mathematical_functions.html#safe_vamd.mathematical_functions.mathematical_func.MathFunc" title="safe_vamd.mathematical_functions.mathematical_func.MathFunc"><code class="xref py py-class docutils literal notranslate"><span class="pre">MathFunc</span></code></a></p>
 <p>Function for the quadratic basis function for a selected node in a finite-element,
 implemented as a subclass of MathFunc.</p>
@@ -554,14 +554,13 @@ implemented as a subclass of MathFunc.</p>
 <p>The piece-wise quadratic basis functions have value of 1 on the associated node and 0 on the other two.</p>
 <p>initializes an instance of QuadBasisFunc.</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.dvalue">
-<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.dvalue" title="Link to this definition">¶</a></dt>
-<dd><p>Evaluates the derivative of the basis function at z.
-:param z: Height(s) (in meters).
-:type z: float</p>
+<dt class="sig sig-object py" id="safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.value">
+<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.value" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the basis function at z.
+:Parameters: <strong>z</strong> (<em>float</em>) – Height(s) (in meters).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Value(s) of the derivative of the basis function at z(s).</p>
+<dd class="field-odd"><p>Value(s) of the basis function at z(s).</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>float</p>
@@ -570,14 +569,13 @@ implemented as a subclass of MathFunc.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.value">
-<span class="sig-name descname"><span class="pre">value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">_SupportsArray</span><span class="p"><span class="pre">[</span></span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">_NestedSequence</span><span class="p"><span class="pre">[</span></span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.value" title="Link to this definition">¶</a></dt>
-<dd><p>Evaluates the basis function at z.
-:param z: Height(s) (in meters).
-:type z: float</p>
+<dt class="sig sig-object py" id="safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.dvalue">
+<span class="sig-name descname"><span class="pre">dvalue</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">z</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.dvalue" title="Link to this definition">¶</a></dt>
+<dd><p>Evaluates the derivative of the basis function at z.
+:Parameters: <strong>z</strong> (<em>float</em>) – Height(s) (in meters).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Value(s) of the basis function at z(s).</p>
+<dd class="field-odd"><p>Value(s) of the derivative of the basis function at z(s).</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p>float</p>
@@ -613,9 +611,9 @@ implemented as a subclass of MathFunc.</p>
 <li><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.bf"><code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange.bf</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.dbf"><code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange.dbf</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.length"><code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange.length</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.calculate_length"><code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange.calculate_length()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_bf"><code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange.create_bf()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.create_dbf"><code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange.create_dbf()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.mesh.element_1d_arbitrary_order_lagrange.Element1DArbitraryOrderLagrange.calculate_length"><code class="docutils literal notranslate"><span class="pre">Element1DArbitraryOrderLagrange.calculate_length()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -634,8 +632,8 @@ implemented as a subclass of MathFunc.</p>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_abs.KirbyABS.tau2"><code class="docutils literal notranslate"><span class="pre">KirbyABS.tau2</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_abs.KirbyABS.z_ref"><code class="docutils literal notranslate"><span class="pre">KirbyABS.z_ref</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_abs.KirbyABS.pml_thickness"><code class="docutils literal notranslate"><span class="pre">KirbyABS.pml_thickness</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.mesh.kirby_abs.KirbyABS.dvalue"><code class="docutils literal notranslate"><span class="pre">KirbyABS.dvalue()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_abs.KirbyABS.value"><code class="docutils literal notranslate"><span class="pre">KirbyABS.value()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.mesh.kirby_abs.KirbyABS.dvalue"><code class="docutils literal notranslate"><span class="pre">KirbyABS.dvalue()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -644,8 +642,8 @@ implemented as a subclass of MathFunc.</p>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_c.KirbyC"><code class="docutils literal notranslate"><span class="pre">KirbyC</span></code></a><ul>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_c.KirbyC.c"><code class="docutils literal notranslate"><span class="pre">KirbyC.c</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_c.KirbyC.alpha"><code class="docutils literal notranslate"><span class="pre">KirbyC.alpha</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.mesh.kirby_c.KirbyC.dvalue"><code class="docutils literal notranslate"><span class="pre">KirbyC.dvalue()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.kirby_c.KirbyC.value"><code class="docutils literal notranslate"><span class="pre">KirbyC.value()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.mesh.kirby_c.KirbyC.dvalue"><code class="docutils literal notranslate"><span class="pre">KirbyC.dvalue()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -654,8 +652,8 @@ implemented as a subclass of MathFunc.</p>
 <li><a class="reference internal" href="#safe_vamd.mesh.mesh_1d.Mesh1D"><code class="docutils literal notranslate"><span class="pre">Mesh1D</span></code></a><ul>
 <li><a class="reference internal" href="#safe_vamd.mesh.mesh_1d.Mesh1D.nodes"><code class="docutils literal notranslate"><span class="pre">Mesh1D.nodes</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.mesh_1d.Mesh1D.elements"><code class="docutils literal notranslate"><span class="pre">Mesh1D.elements</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.mesh.mesh_1d.Mesh1D.add_top_pml"><code class="docutils literal notranslate"><span class="pre">Mesh1D.add_top_pml()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.mesh_1d.Mesh1D.load_from_element_bounds"><code class="docutils literal notranslate"><span class="pre">Mesh1D.load_from_element_bounds()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.mesh.mesh_1d.Mesh1D.add_top_pml"><code class="docutils literal notranslate"><span class="pre">Mesh1D.add_top_pml()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -674,8 +672,8 @@ implemented as a subclass of MathFunc.</p>
 <li><a class="reference internal" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc"><code class="docutils literal notranslate"><span class="pre">QuadBasisFunc</span></code></a><ul>
 <li><a class="reference internal" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.bfid"><code class="docutils literal notranslate"><span class="pre">QuadBasisFunc.bfid</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.node_coords"><code class="docutils literal notranslate"><span class="pre">QuadBasisFunc.node_coords</span></code></a></li>
-<li><a class="reference internal" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.dvalue"><code class="docutils literal notranslate"><span class="pre">QuadBasisFunc.dvalue()</span></code></a></li>
 <li><a class="reference internal" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.value"><code class="docutils literal notranslate"><span class="pre">QuadBasisFunc.value()</span></code></a></li>
+<li><a class="reference internal" href="#safe_vamd.mesh.quadratic_basis_function.QuadBasisFunc.dvalue"><code class="docutils literal notranslate"><span class="pre">QuadBasisFunc.dvalue()</span></code></a></li>
 </ul>
 </li>
 </ul>
