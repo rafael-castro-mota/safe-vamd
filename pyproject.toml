@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68.1.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safe-vamd"
+version = "0.1.0"
+description = "A Python package to reconstruct acoustic fields from sparsely sampled acoustic pressure data via mode decomposition."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    {name = "Rafael Castro Mota", email = "rafael.castro-mota@ptb.de"},
+    {name = "Stefan Jacob", email = "stefan.jacob@ptb.de"},
+    {name = "Ray Kirby"},
+    {name = "Paul Williams", email = "paul.williams@uts.edu.au"}
+]
+
+# Core package runtime dependencies
+dependencies = [
+    "matplotlib>=3.8.2",
+    "numpy>=1.26.3",
+    "scipy>=1.15.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/rafael-castro-mota/safe-vamd"
+Documentation = "https://safe-vamd.readthedocs.io/en/latest/"
+
+# Documentation dependencies
+[project.optional-dependencies]
+docs = [
+    "sphinx>=7.0.0",
+    "numpydoc",
+    "sphinx-rtd-theme", # optional: popular Read the Docs theme
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

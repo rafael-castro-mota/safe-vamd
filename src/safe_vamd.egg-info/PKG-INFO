@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: safe-vamd
+Version: 0.1.0
+Summary: A Python package to construct acosutic far-field from sparsely sampled acosutic pressure data via mode decomposition.
+Author-email: Rafael Castro Mota <rafael.castro-mota@ptb.de>, Stefan Jacob <stefan.jacob@ptb.de>, Paul Williams <paul.williams@uts.edu.au>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: matplotlib>=3.8.2
+Requires-Dist: numpy>=1.26.3
+Requires-Dist: scipy>=1.15.2
+Provides-Extra: docs
+Requires-Dist: sphinx>=7.0.0; extra == "docs"
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+Dynamic: license-file
